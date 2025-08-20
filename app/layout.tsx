@@ -5,6 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://hosseinchegini.com'),
   title: 'Hossein Chegini - AI & ML Engineer | Ph.D. Information Systems',
   description: 'If you have good ideas worth processing, I can lift them up. Expert AI & ML Engineer with Ph.D. in Information Systems. Specializing in artificial intelligence, machine learning, and data engineering solutions.',
   keywords: ['AI Engineer', 'Machine Learning', 'Information Systems', 'Data Science', 'Software Engineer', 'Ph.D.', 'University of Auckland', 'Artificial Intelligence', 'ML Engineer', 'Data Engineering'],
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'Hossein Chegini Portfolio',
+    url: 'https://hosseinchegini.com',
   },
   twitter: {
     card: 'summary_large_image',
