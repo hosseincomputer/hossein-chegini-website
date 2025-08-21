@@ -65,10 +65,10 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center space-x-2 bg-primary-500/20 backdrop-blur-sm border border-primary-500/30 rounded-full px-6 py-3"
+            className="inline-flex items-center space-x-2 bg-primary-500/20 backdrop-blur-sm border border-primary-500/30 rounded-full px-4 md:px-6 py-2 md:py-3"
           >
             <Sparkles className="w-5 h-5 text-primary-400" />
-            <span className="text-primary-700 font-medium">Welcome to my digital realm</span>
+            <span className="text-primary-700 font-medium text-sm md:text-base">Welcome to my digital realm</span>
           </motion.div>
 
           {/* Hand-drawn Arch Design */}
@@ -76,13 +76,13 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="relative mb-8"
+            className="relative mb-4 md:mb-8"
           >
             <svg
               width="600"
               height="280"
               viewBox="0 0 600 280"
-              className="mx-auto"
+              className="mx-auto w-full max-w-md md:max-w-lg lg:max-w-xl"
             >
               {/* Shadow layer - positioned 4cm (approximately 40px) below */}
               <g opacity="0.6" filter="url(#shadow)">
@@ -196,20 +196,20 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-5xl md:text-7xl font-bold leading-tight"
+            className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight"
           >
             <span className="text-dark-950">I'm </span>
             <span className="gradient-text">Hossein Chegini</span>
             <br />
-            <span className="text-4xl md:text-6xl text-dark-700 font-light">
+            <span className="text-3xl md:text-4xl lg:text-6xl text-dark-700 font-light">
               AI & ML Engineer
             </span>
             <br />
-            <span className="text-2xl md:text-3xl text-primary-600 font-medium">
+            <span className="text-xl md:text-2xl lg:text-3xl text-primary-600 font-medium">
               Ph.D. Information Systems
             </span>
             <br />
-            <span className="text-xl md:text-2xl text-dark-600 font-normal mt-2">
+            <span className="text-lg md:text-xl lg:text-2xl text-dark-600 font-normal mt-2">
               Bridge your ideas and data with AI. Practical ML that turns data into measurable actions.
             </span>
           </motion.h1>
@@ -219,7 +219,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-xl md:text-2xl text-dark-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl lg:text-2xl text-dark-600 max-w-3xl mx-auto leading-relaxed px-4"
           >
             Crafting intelligent solutions at the intersection of artificial intelligence, 
             machine learning, and data engineering.
@@ -230,13 +230,13 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center px-4"
           >
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={scrollToNext}
-              className="px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-primary-600/25 transition-all duration-300 flex items-center space-x-2"
+              className="px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-primary-600/25 transition-all duration-300 flex items-center space-x-2 text-sm md:text-base"
             >
               <span>Explore My Work</span>
               <ArrowDown className="w-5 h-5" />
@@ -246,7 +246,7 @@ const HeroSection = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-4 border border-primary-600/30 text-primary-700 font-semibold rounded-lg hover:bg-primary-500/10 transition-all duration-300"
+              className="px-6 md:px-8 py-3 md:py-4 border border-primary-600/30 text-primary-700 font-semibold rounded-lg hover:bg-primary-500/10 transition-all duration-300 text-sm md:text-base"
             >
               Get In Touch
             </motion.button>
@@ -257,7 +257,7 @@ const HeroSection = () => {
              initial={{ opacity: 0, y: 30 }}
              animate={{ opacity: 1, y: 0 }}
              transition={{ duration: 0.8, delay: 1.0 }}
-             className="flex justify-center flex-wrap gap-4 pt-8"
+             className="flex justify-center flex-wrap gap-3 md:gap-4 pt-6 md:pt-8 px-4"
            >
                           <motion.a
                 href="https://github.com/hosseincomputer"
