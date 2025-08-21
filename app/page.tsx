@@ -12,7 +12,7 @@ import Navigation from '@/components/Navigation'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-dark-950 via-dark-900 to-primary-950">
+    <main className="min-h-screen bg-gradient-to-br from-cream-50 via-cream-100 to-cream-200">
       <Navigation />
       
       <HeroSection />
@@ -31,8 +31,8 @@ export default function Home() {
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <div className="w-12 h-12 bg-primary-600/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary-500/30">
-          <ArrowDown className="w-5 h-5 text-primary-400" />
+        <div className="w-12 h-12 bg-primary-600/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary-600/30">
+          <ArrowDown className="w-5 h-5 text-primary-600" />
         </div>
       </motion.div>
     </main>

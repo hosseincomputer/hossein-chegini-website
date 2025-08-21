@@ -25,7 +25,7 @@ export default function Navigation() {
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-dark-900/80 backdrop-blur-md border-b border-primary-500/20' 
+          ? 'bg-cream-100/80 backdrop-blur-md border-b border-primary-500/20' 
           : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
@@ -35,11 +35,11 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <motion.div
-            className="text-xl font-bold text-primary-400"
+            className="text-xl font-bold text-primary-700"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            Hossein
+            Hossein Chegini
           </motion.div>
           
           <div className="hidden md:flex space-x-8">
@@ -54,12 +54,12 @@ export default function Navigation() {
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-300 hover:text-primary-400 transition-colors duration-200 relative group"
+                className="text-dark-700 hover:text-primary-700 transition-colors duration-200 relative group"
                 whileHover={{ y: -2 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-400 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 transition-all duration-300 group-hover:w-full"></span>
               </motion.button>
             ))}
           </div>
@@ -67,7 +67,7 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <div className="md:hidden">
             <motion.button
-              className="text-gray-300 hover:text-primary-400 transition-colors"
+              className="text-dark-700 hover:text-primary-700 transition-colors"
               whileTap={{ scale: 0.95 }}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
