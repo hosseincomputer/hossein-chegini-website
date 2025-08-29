@@ -80,7 +80,7 @@ npm start
 Create a `.env.local` file in the root directory:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://kasraanalytics.ai
+NEXT_PUBLIC_SITE_URL=https://kasralabs.ai
 ```
 
 ### Customization

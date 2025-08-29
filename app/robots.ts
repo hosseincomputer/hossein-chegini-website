@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://kasraanalytics.ai/sitemap.xml',
+    sitemap: 'https://kasralabs.ai/sitemap.xml',
   }
 }

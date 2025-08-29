@@ -3,31 +3,31 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://kasraanalytics.ai',
+      url: 'https://kasralabs.ai',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,
     },
     {
-      url: 'https://kasraanalytics.ai/#skills',
+      url: 'https://kasralabs.ai/#skills',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://kasraanalytics.ai/#experience',
+      url: 'https://kasralabs.ai/#experience',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://kasraanalytics.ai/#projects',
+      url: 'https://kasralabs.ai/#projects',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://kasraanalytics.ai/#contact',
+      url: 'https://kasralabs.ai/#contact',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,

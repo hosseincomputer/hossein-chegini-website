@@ -5,7 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://kasraanalytics.ai'),
+  metadataBase: new URL('https://kasralabs.ai'),
   title: 'Kasra Analytics - AI & ML Engineer | Ph.D. Information Systems',
   description: 'If you have good ideas worth processing, I can lift them up. Expert AI & ML Engineer with Ph.D. in Information Systems. Specializing in artificial intelligence, machine learning, and data engineering solutions.',
   keywords: ['AI Engineer', 'Machine Learning', 'Information Systems', 'Data Science', 'Software Engineer', 'Ph.D.', 'University of Auckland', 'Artificial Intelligence', 'ML Engineer', 'Data Engineering'],
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'Kasra Analytics',
-    url: 'https://kasraanalytics.ai',
+    url: 'https://kasralabs.ai',
   },
   twitter: {
     card: 'summary_large_image',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description: 'If you have good ideas worth processing, I can lift them up. Expert AI & ML Engineer with Ph.D. in Information Systems.',
   },
   alternates: {
-    canonical: 'https://kasraanalytics.ai',
+    canonical: 'https://kasralabs.ai',
   },
 }
 
