@@ -5,29 +5,29 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://hosseinchegini.com'),
-  title: 'Hossein AI Thinking - AI & ML Engineer | Ph.D. Information Systems',
+  metadataBase: new URL('https://kasraanalytics.ai'),
+  title: 'Kasra Analytics - AI & ML Engineer | Ph.D. Information Systems',
   description: 'If you have good ideas worth processing, I can lift them up. Expert AI & ML Engineer with Ph.D. in Information Systems. Specializing in artificial intelligence, machine learning, and data engineering solutions.',
   keywords: ['AI Engineer', 'Machine Learning', 'Information Systems', 'Data Science', 'Software Engineer', 'Ph.D.', 'University of Auckland', 'Artificial Intelligence', 'ML Engineer', 'Data Engineering'],
   authors: [{ name: 'Hossein Chegini' }],
   creator: 'Hossein Chegini',
-  publisher: 'Hossein Chegini',
+  publisher: 'Kasra Analytics',
   robots: 'index, follow',
   openGraph: {
-    title: 'Hossein AI Thinking - AI & ML Engineer | Ph.D. Information Systems',
+    title: 'Kasra Analytics - AI & ML Engineer | Ph.D. Information Systems',
     description: 'If you have good ideas worth processing, I can lift them up. Expert AI & ML Engineer with Ph.D. in Information Systems.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'Hossein AI Thinking',
-    url: 'https://hosseinchegini.com',
+    siteName: 'Kasra Analytics',
+    url: 'https://kasraanalytics.ai',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hossein AI Thinking - AI & ML Engineer | Ph.D. Information Systems',
+    title: 'Kasra Analytics - AI & ML Engineer | Ph.D. Information Systems',
     description: 'If you have good ideas worth processing, I can lift them up. Expert AI & ML Engineer with Ph.D. in Information Systems.',
   },
   alternates: {
-    canonical: 'https://hosseinchegini.com',
+    canonical: 'https://kasraanalytics.ai',
   },
 }
 

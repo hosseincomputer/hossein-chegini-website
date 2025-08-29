@@ -90,7 +90,7 @@ const SkillsSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="gradient-text">Skills & Expertise</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-2xl md:text-3xl gradient-text max-w-4xl mx-auto font-medium">
             A comprehensive toolkit for building intelligent systems and data-driven solutions
           </p>
         </motion.div>

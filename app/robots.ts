@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://hosseinchegini.com/sitemap.xml',
+    sitemap: 'https://kasraanalytics.ai/sitemap.xml',
   }
 }

@@ -1,4 +1,4 @@
-# Hossein Chegini - AI & ML Engineer Portfolio
+# Kasra Analytics - AI & ML Engineer Portfolio
 
 > "If you have good ideas worth processing, I can lift them up."
 
@@ -26,8 +26,8 @@ A modern, responsive portfolio website showcasing my expertise in Artificial Int
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/hossein-chegini-portfolio.git
-cd hossein-chegini-portfolio
+git clone https://github.com/yourusername/kasra-analytics-portfolio.git
+cd kasra-analytics-portfolio
 ```
 
 2. Install dependencies:
@@ -80,7 +80,7 @@ npm start
 Create a `.env.local` file in the root directory:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://hosseinchegini.com
+NEXT_PUBLIC_SITE_URL=https://kasraanalytics.ai
 ```
 
 ### Customization

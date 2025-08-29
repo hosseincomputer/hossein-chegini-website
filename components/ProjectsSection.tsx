@@ -1,56 +1,70 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ExternalLink, Github, Code, Globe, Database, Smartphone } from 'lucide-react'
+import { ExternalLink, Github, Code, Globe, Database, Smartphone, CheckCircle, Target } from 'lucide-react'
 
-const projects = [
+const completedProjects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution built with Next.js, TypeScript, and Stripe integration. Features include user authentication, product management, and payment processing.",
-    technologies: ["Next.js", "TypeScript", "Stripe", "Tailwind CSS", "Prisma"],
-    image: "/api/placeholder/400/250",
-    github: "https://github.com",
-    live: "https://demo.com",
-    category: "Full-Stack"
+    title: "Time Series Forecasting",
+    description: "Using advanced Python methods and packages for implementing forecasting with enhanced accuracy.",
+    technologies: ["Python", "SQL", "Statistics", "OpenAI API", "Google API"],
+    category: "Data Science"
   },
   {
     id: 2,
-    title: "AI Chat Application",
-    description: "Real-time chat application powered by OpenAI's GPT API. Includes message history, user authentication, and responsive design.",
-    technologies: ["React", "Node.js", "OpenAI API", "Socket.io", "MongoDB"],
-    image: "/api/placeholder/400/250",
-    github: "https://github.com",
-    live: "https://demo.com",
+    title: "LLM Chat RAG",
+    description: "Converting your huge document into bot for a quick question and answer with high accuracy.",
+    technologies: ["Python", "SQL", "Note", "Statistics", "OpenAI API"],
     category: "AI/ML"
   },
   {
     id: 3,
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    technologies: ["Vue.js", "Firebase", "Vuex", "Vuetify", "PWA"],
-    image: "/api/placeholder/400/250",
-    github: "https://github.com",
-    live: "https://demo.com",
-    category: "Web App"
+    title: "Main Stream Insights",
+    description: "Using content analysis for viral prediction and gap analysis for required content such as YouTube.",
+    technologies: ["Python", "SQL", "Note", "Statistics", "Google API"],
+    category: "Analytics"
   },
   {
     id: 4,
-    title: "Mobile Fitness Tracker",
-    description: "Cross-platform mobile app for tracking workouts, nutrition, and fitness goals with data visualization and social features.",
-    technologies: ["React Native", "Expo", "GraphQL", "Apollo", "Realm"],
-    image: "/api/placeholder/400/250",
-    github: "https://github.com",
-    live: "https://demo.com",
-    category: "Mobile"
+    title: "Scrawler",
+    description: "Automating the content for website.",
+    technologies: ["Python", "SQL", "Note", "Statistics", "Google API"],
+    category: "Automation"
+  }
+]
+
+const futureProjects = [
+  {
+    id: 5,
+    title: "Music Manager Band",
+    description: "Comprehensive music management system for bands with scheduling, inventory, and performance tracking.",
+    technologies: ["Python", "SQL", "Note", "Statistics", "Google API"],
+    category: "Music"
+  },
+  {
+    id: 6,
+    title: "Image Processing and Object Detection",
+    description: "Advanced computer vision system for image analysis and real-time object detection using AI.",
+    technologies: ["Python", "SQL", "Statistics", "OpenAI API", "Google API"],
+    category: "Computer Vision"
+  },
+  {
+    id: 7,
+    title: "Email Automatic Answering",
+    description: "Intelligent email automation system for automatic response generation and management.",
+    technologies: ["Python", "SQL", "Note", "Statistics", "OpenAI API"],
+    category: "Automation"
   }
 ]
 
 const categoryIcons = {
-  "Full-Stack": Code,
+  "Data Science": Database,
   "AI/ML": Globe,
-  "Web App": Database,
-  "Mobile": Smartphone
+  "Analytics": Smartphone,
+  "Automation": Code,
+  "Music": Smartphone,
+  "Computer Vision": Globe
 }
 
 export default function ProjectsSection() {
@@ -64,86 +78,134 @@ export default function ProjectsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Featured <span className="text-primary-400">Projects</span>
+          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
+            Featured Projects
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Here are some of the projects I've worked on, showcasing my skills in full-stack development, 
-            mobile applications, and modern web technologies.
+          <p className="text-2xl md:text-3xl gradient-text max-w-4xl mx-auto font-medium">
+            A comprehensive toolkit for building intelligent systems and data-driven solutions
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => {
-            const CategoryIcon = categoryIcons[project.category as keyof typeof categoryIcons] || Code
-            
-            return (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-                className="bg-dark-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-primary-500/20 hover:border-primary-500/40 transition-all duration-300"
-              >
-                <div className="relative h-48 bg-gradient-to-br from-primary-900/20 to-dark-800 flex items-center justify-center">
-                  <CategoryIcon className="w-16 h-16 text-primary-400" />
-                  <div className="absolute top-4 right-4">
-                    <span className="px-3 py-1 bg-primary-500/20 text-primary-400 text-sm rounded-full border border-primary-500/30">
-                      {project.category}
-                    </span>
-                  </div>
-                </div>
-                
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-400 mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-dark-700 text-gray-300 text-sm rounded-full border border-dark-600"
-                      >
-                        {tech}
+        {/* Completed Projects Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <div className="flex items-center gap-3 mb-8">
+            <CheckCircle className="w-8 h-8 text-green-400" />
+            <h3 className="text-3xl font-bold gradient-text">Completed Projects</h3>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {completedProjects.map((project, index) => {
+              const CategoryIcon = categoryIcons[project.category as keyof typeof categoryIcons] || Code
+              
+              return (
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                  className="bg-dark-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-green-500/20 hover:border-green-500/40 transition-all duration-300"
+                >
+                  <div className="relative h-48 bg-gradient-to-br from-green-900/20 to-dark-800 flex items-center justify-center">
+                    <CategoryIcon className="w-16 h-16 text-green-400" />
+                    <div className="absolute top-4 right-4">
+                      <span className="px-3 py-1 bg-green-500/20 text-green-400 text-sm rounded-full border border-green-500/30">
+                        {project.category}
                       </span>
-                    ))}
+                    </div>
                   </div>
                   
-                  <div className="flex gap-4">
-                    <motion.a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-dark-700 hover:bg-dark-600 text-gray-300 hover:text-white rounded-lg transition-all duration-200 border border-dark-600 hover:border-primary-500/50"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Github className="w-4 h-4" />
-                      Code
-                    </motion.a>
-                    <motion.a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-500 text-white rounded-lg transition-all duration-200"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
-                    </motion.a>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-300 mb-3">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-500 mb-4 leading-relaxed">
+                      {project.description}
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-3 py-1 bg-dark-700 text-gray-300 text-sm rounded-full border border-dark-600"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            )
-          })}
-        </div>
+                </motion.div>
+              )
+            })}
+          </div>
+        </motion.div>
+
+        {/* Future Projects Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <div className="flex items-center gap-3 mb-8">
+            <Target className="w-8 h-8 text-blue-400" />
+            <h3 className="text-3xl font-bold gradient-text">Projects Keen to Do</h3>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {futureProjects.map((project, index) => {
+              const CategoryIcon = categoryIcons[project.category as keyof typeof categoryIcons] || Code
+              
+              return (
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                  className="bg-dark-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300"
+                >
+                  <div className="relative h-48 bg-gradient-to-br from-blue-900/20 to-dark-800 flex items-center justify-center">
+                    <CategoryIcon className="w-16 h-16 text-blue-400" />
+                    <div className="absolute top-4 right-4">
+                      <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-sm rounded-full border border-blue-500/30">
+                        {project.category}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-300 mb-3">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-500 mb-4 leading-relaxed">
+                      {project.description}
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-3 py-1 bg-dark-700 text-gray-300 text-sm rounded-full border border-dark-600"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              )
+            })}
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
