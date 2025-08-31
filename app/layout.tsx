@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   creator: 'Hossein Chegini',
   publisher: 'Kasra Analytics',
   robots: 'index, follow',
+  icons: {
+    icon: '/kasra_logo.png',
+    shortcut: '/kasra_logo.png',
+    apple: '/kasra_logo.png',
+  },
   openGraph: {
     title: 'Kasra Analytics - AI & ML Engineer | Ph.D. Information Systems',
     description: 'If you have good ideas worth processing, I can lift them up. Expert AI & ML Engineer with Ph.D. in Information Systems.',
@@ -20,11 +25,20 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Kasra Analytics',
     url: 'https://kasralabs.ai',
+    images: [
+      {
+        url: '/kasra_logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Kasra Analytics Logo',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Kasra Analytics - AI & ML Engineer | Ph.D. Information Systems',
     description: 'If you have good ideas worth processing, I can lift them up. Expert AI & ML Engineer with Ph.D. in Information Systems.',
+    images: ['/kasra_logo.png'],
   },
   alternates: {
     canonical: 'https://kasralabs.ai',

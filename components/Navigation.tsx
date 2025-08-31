@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -35,11 +36,18 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <motion.div
-            className="text-xl font-bold text-primary-700"
+            className="flex items-center"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            Hossein Chegini
+            <Image
+              src="/kasra_logo.png"
+              alt="Kasra Analytics Logo"
+              width={40}
+              height={40}
+              className="mr-2"
+            />
+            <span className="text-xl font-bold text-primary-700">Kasra Analytics</span>
           </motion.div>
           
           <div className="hidden md:flex space-x-8">
