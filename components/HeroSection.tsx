@@ -61,22 +61,6 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="space-y-8"
         >
-          {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="flex justify-center mb-4"
-          >
-            <img
-              src="/kasra_logo.png"
-              alt="Kasra Analytics Logo"
-              width={80}
-              height={80}
-              className="rounded-lg shadow-lg"
-            />
-          </motion.div>
-
           {/* Greeting */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
