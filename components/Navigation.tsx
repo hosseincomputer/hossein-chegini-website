@@ -40,7 +40,7 @@ export default function Navigation() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <Image
+            <img
               src="/kasra_logo.png"
               alt="Kasra Analytics Logo"
               width={40}

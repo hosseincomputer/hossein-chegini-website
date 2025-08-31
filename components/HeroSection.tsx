@@ -68,7 +68,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="flex justify-center mb-4"
           >
-            <Image
+            <img
               src="/kasra_logo.png"
               alt="Kasra Analytics Logo"
               width={80}
