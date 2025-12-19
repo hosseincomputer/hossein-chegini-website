@@ -5,7 +5,7 @@ import { ArrowDown, Github, Linkedin, Mail, Brain, Database, Code, Sparkles } fr
 import HeroSection from '@/components/HeroSection'
 import SkillsSection from '@/components/SkillsSection'
 import ExperienceSection from '@/components/ExperienceSection'
-
+import ImageProcessingSection from '@/components/ImageProcessingSection'
 import ProjectsSection from '@/components/ProjectsSection'
 import ContactSection from '@/components/ContactSection'
 import Navigation from '@/components/Navigation'
@@ -20,9 +20,11 @@ export default function Home() {
       <SkillsSection />
       
       <ExperienceSection />
-      
+
+      <ImageProcessingSection />
+
       <ProjectsSection />
-      
+
       <ContactSection />
       
       {/* Floating scroll indicator */}
