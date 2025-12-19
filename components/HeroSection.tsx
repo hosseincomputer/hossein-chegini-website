@@ -61,17 +61,6 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="space-y-8"
         >
-          {/* Greeting */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center space-x-2 bg-primary-500/20 backdrop-blur-sm border border-primary-500/30 rounded-full px-4 md:px-6 py-2 md:py-3"
-          >
-            <Sparkles className="w-5 h-5 text-primary-400" />
-            <span className="text-primary-700 font-medium text-sm md:text-base">Welcome to my digital realm</span>
-          </motion.div>
-
           {/* Hand-drawn Arch Design */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
