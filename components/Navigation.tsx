@@ -1,11 +1,13 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import { X } from 'lucide-react'
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,8 +21,18 @@ export default function Navigation() {
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
+      setIsMobileMenuOpen(false)
     }
   }
+
+  const navItems = [
+    { id: 'hero', label: 'Home' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'image-processing', label: 'Image Processing' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'contact', label: 'Contact' }
+  ]
 
   return (
     <motion.nav
@@ -51,14 +63,7 @@ export default function Navigation() {
           </motion.div>
           
           <div className="hidden md:flex space-x-8">
-            {[
-              { id: 'hero', label: 'Home' },
-              { id: 'skills', label: 'Skills' },
-              { id: 'experience', label: 'Experience' },
-              { id: 'education', label: 'Education' },
-              { id: 'projects', label: 'Projects' },
-              { id: 'contact', label: 'Contact' }
-            ].map((item) => (
+            {navItems.map((item) => (
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
@@ -75,16 +80,49 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <div className="md:hidden">
             <motion.button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-dark-700 hover:text-primary-700 transition-colors"
               whileTap={{ scale: 0.95 }}
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
             </motion.button>
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden bg-cream-100/95 backdrop-blur-md border-b border-primary-500/20 overflow-hidden"
+          >
+            <div className="px-4 py-4 space-y-2">
+              {navItems.map((item, index) => (
+                <motion.button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.05 }}
+                  className="block w-full text-left px-4 py-3 text-dark-700 hover:text-primary-700 hover:bg-primary-500/10 rounded-lg transition-all duration-200"
+                >
+                  {item.label}
+                </motion.button>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   )
 }
