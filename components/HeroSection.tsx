@@ -199,6 +199,12 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight"
           >
+            <span className="gradient-text">Kasralabs</span>
+            <br />
+            <span className="text-3xl md:text-4xl lg:text-6xl text-dark-700 font-light">
+              Make Your Ideas Live and Productive
+            </span>
+            <br />
             <span className="text-lg md:text-xl lg:text-2xl text-dark-600 font-normal mt-2">
               Bridge your ideas and data with AI. Practical ML that turns data into measurable actions.
             </span>
