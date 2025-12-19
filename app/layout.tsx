@@ -6,9 +6,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://kasralabs.ai'),
-  title: 'Kasralabs - Make Your Ideas Live and Productive | AI & ML Solutions',
-  description: 'Bridge your ideas and data with AI. Practical ML that turns data into measurable actions. Expert AI & ML engineering, image processing, data analytics, and intelligent solutions.',
-  keywords: ['Kasralabs', 'AI Solutions', 'Machine Learning', 'Image Processing', 'Data Analytics', 'Computer Vision', 'AI Engineering', 'ML Engineering', 'Data Science', 'Plant Analysis', 'Leaf Analysis', 'Auckland', 'New Zealand'],
+  title: 'Kasralabs - AI as a Service | ML, Forecasting & Image Processing Solutions',
+  description: 'KasraLabs provides practical AI-as-a-Service for real-world problems. Expert machine learning, time series forecasting, image processing, computer vision, and AI products. Bridge your ideas and data with AI.',
+  keywords: ['AI as a Service', 'AI-as-a-Service', 'Machine Learning', 'ML', 'Forecasting', 'Time Series Forecasting', 'Image Processing', 'Computer Vision', 'AI Products', 'AI Solutions', 'Practical AI', 'Real-world AI', 'Data Analytics', 'Plant Analysis', 'Leaf Analysis', 'Auckland AI', 'New Zealand AI', 'Kasralabs'],
   authors: [{ name: 'Kasralabs' }],
   creator: 'Kasralabs',
   publisher: 'Kasralabs',
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
     apple: '/kasra_logo.png',
   },
   openGraph: {
-    title: 'Kasralabs - Make Your Ideas Live and Productive',
-    description: 'Bridge your ideas and data with AI. Practical ML that turns data into measurable actions. Expert AI & ML engineering and image processing solutions.',
+    title: 'Kasralabs - AI as a Service | ML, Forecasting & Image Processing',
+    description: 'KasraLabs provides practical AI-as-a-Service for real-world problems. Expert machine learning, forecasting, image processing, and AI products.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Kasralabs',
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kasralabs - Make Your Ideas Live and Productive',
-    description: 'Bridge your ideas and data with AI. Practical ML that turns data into measurable actions.',
+    title: 'Kasralabs - AI as a Service | ML, Forecasting & Image Processing',
+    description: 'KasraLabs provides practical AI-as-a-Service for real-world problems. Expert ML, forecasting, and image processing.',
     images: ['/kasra_logo.png'],
   },
   alternates: {
@@ -61,7 +61,7 @@ export default function RootLayout({
     name: 'Kasralabs',
     url: 'https://kasralabs.ai',
     logo: 'https://kasralabs.ai/kasra_logo.png',
-    description: 'Bridge your ideas and data with AI. Practical ML that turns data into measurable actions.',
+    description: 'KasraLabs provides practical AI-as-a-Service for real-world problems. Expert machine learning, forecasting, image processing, and AI products.',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Auckland',
@@ -74,14 +74,26 @@ export default function RootLayout({
       'https://medium.com/@h.chegini',
     ],
     knowsAbout: [
+      'AI as a Service',
       'Artificial Intelligence',
       'Machine Learning',
+      'Forecasting',
+      'Time Series Forecasting',
       'Image Processing',
       'Computer Vision',
       'Data Analytics',
+      'AI Products',
       'Plant Analysis',
       'Leaf Analysis',
     ],
+    makesOffer: {
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: 'AI as a Service',
+        description: 'Practical AI solutions for real-world problems including ML, forecasting, and image processing',
+      },
+    },
   }
 
   return (

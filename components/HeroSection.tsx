@@ -205,6 +205,10 @@ const HeroSection = () => {
               Make Your Ideas Live and Productive
             </span>
             <br />
+            <span className="text-xl md:text-2xl lg:text-3xl text-primary-600 font-semibold mt-4 block">
+              KasraLabs provides practical AI-as-a-Service for real-world problems.
+            </span>
+            <br />
             <span className="text-lg md:text-xl lg:text-2xl text-dark-600 font-normal mt-2">
               Bridge your ideas and data with AI. Practical ML that turns data into measurable actions.
             </span>
