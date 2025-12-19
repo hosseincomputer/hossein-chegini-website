@@ -16,12 +16,12 @@ export default function Home() {
       <Navigation />
       
       <HeroSection />
-      
-      <SkillsSection />
-      
-      <ExperienceSection />
 
       <ImageProcessingSection />
+
+      <SkillsSection />
+
+      <ExperienceSection />
 
       <ProjectsSection />
 

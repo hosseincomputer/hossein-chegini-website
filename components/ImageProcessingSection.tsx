@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
-import Image from 'next/image'
 
 const ImageProcessingSection = () => {
   const [leafIndex, setLeafIndex] = useState(0)
@@ -80,13 +79,11 @@ const ImageProcessingSection = () => {
               Leaves
             </h3>
 
-            <div className="relative aspect-square mb-6 bg-cream-50 rounded-xl overflow-hidden">
-              <Image
+            <div className="relative aspect-square mb-6 bg-cream-50 rounded-xl overflow-hidden flex items-center justify-center p-4">
+              <img
                 src={leafImages[leafIndex]}
                 alt={`Leaf ${leafIndex + 1}`}
-                fill
-                className="object-contain p-4"
-                priority={leafIndex === 0}
+                className="max-w-full max-h-full object-contain"
               />
             </div>
 
@@ -127,13 +124,11 @@ const ImageProcessingSection = () => {
               Plants
             </h3>
 
-            <div className="relative aspect-square mb-6 bg-cream-50 rounded-xl overflow-hidden">
-              <Image
+            <div className="relative aspect-square mb-6 bg-cream-50 rounded-xl overflow-hidden flex items-center justify-center p-4">
+              <img
                 src={plantImages[plantIndex]}
                 alt={`Plant ${plantIndex + 1}`}
-                fill
-                className="object-contain p-4"
-                priority={plantIndex === 0}
+                className="max-w-full max-h-full object-contain"
               />
             </div>
 
