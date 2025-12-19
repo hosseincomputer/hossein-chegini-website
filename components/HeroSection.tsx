@@ -194,7 +194,7 @@ const HeroSection = () => {
               Make Your Ideas Live and Productive
             </span>
             <br />
-            <span className="text-xl md:text-2xl lg:text-3xl text-primary-600 font-semibold mt-4 block">
+            <span className="text-xl md:text-2xl lg:text-3xl font-semibold mt-4 block" style={{ color: '#cc3300' }}>
               KasraLabs provides practical AI-as-a-Service for real-world problems.
             </span>
             <br />
