@@ -71,7 +71,7 @@ const HeroSection = () => {
             <img
               src="/kasra_logo.png"
               alt="Kasralabs Logo"
-              className="mx-auto w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+              className="mx-auto w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
             />
           </motion.div>
 
