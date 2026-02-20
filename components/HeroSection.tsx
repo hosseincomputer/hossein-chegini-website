@@ -61,124 +61,18 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="space-y-8"
         >
-          {/* Hand-drawn Arch Design */}
+          {/* Logo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
             className="relative mb-4 md:mb-8"
           >
-            <svg
-              width="600"
-              height="280"
-              viewBox="0 0 600 280"
-              className="mx-auto w-full max-w-md md:max-w-lg lg:max-w-xl"
-            >
-              {/* Shadow layer - positioned 4cm (approximately 40px) below */}
-              <g opacity="0.6" filter="url(#shadow)">
-                {/* Shadow outer arch curve */}
-                <path
-                  d="M 80 220 Q 300 60 520 220"
-                  stroke="#000000"
-                  strokeWidth="8"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-                
-                {/* Shadow inner arch curve */}
-                <path
-                  d="M 120 200 Q 300 80 480 200"
-                  stroke="#000000"
-                  strokeWidth="8"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-                
-                {/* Shadow left side vertical segment */}
-                <path
-                  d="M 80 220 L 80 240 L 120 240 L 120 200"
-                  stroke="#000000"
-                  strokeWidth="8"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-                
-                {/* Shadow right side vertical segment */}
-                <path
-                  d="M 520 220 L 520 240 L 480 240 L 480 200"
-                  stroke="#000000"
-                  strokeWidth="8"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-              </g>
-              
-              {/* Main arch - outer curve */}
-              <path
-                d="M 80 180 Q 300 20 520 180"
-                stroke="url(#archGradient)"
-                strokeWidth="8"
-                fill="none"
-                className="drop-shadow-lg"
-                strokeLinecap="round"
-              />
-              
-              {/* Main arch - inner curve */}
-              <path
-                d="M 120 160 Q 300 40 480 160"
-                stroke="url(#archGradient)"
-                strokeWidth="8"
-                fill="none"
-                strokeLinecap="round"
-              />
-              
-              {/* Main arch - left side vertical segment */}
-              <path
-                d="M 80 180 L 80 200 L 120 200 L 120 160"
-                stroke="url(#archGradient)"
-                strokeWidth="8"
-                fill="none"
-                strokeLinecap="round"
-              />
-              
-              {/* Main arch - right side vertical segment with shading */}
-              <path
-                d="M 520 180 L 520 200 L 480 200 L 480 160"
-                stroke="url(#archGradient)"
-                strokeWidth="8"
-                fill="none"
-                strokeLinecap="round"
-              />
-              
-              {/* Shading lines on right side */}
-              <g opacity="0.3">
-                {Array.from({ length: 15 }, (_, i) => (
-                  <line
-                    key={i}
-                    x1={490 + i * 2}
-                    y1="160"
-                    x2={490 + i * 2}
-                    y2="200"
-                    stroke="url(#archGradient)"
-                    strokeWidth="1"
-                  />
-                ))}
-              </g>
-              
-              {/* Gradient definitions */}
-              <defs>
-                <linearGradient id="archGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#d4a73a" />
-                  <stop offset="50%" stopColor="#e6c063" />
-                  <stop offset="100%" stopColor="#d4a73a" />
-                </linearGradient>
-                
-                {/* Shadow filter */}
-                <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-                  <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#000000" floodOpacity="0.3"/>
-                </filter>
-              </defs>
-            </svg>
+            <img
+              src="/kasra_logo.png"
+              alt="Kasralabs Logo"
+              className="mx-auto w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+            />
           </motion.div>
 
           {/* Main heading */}
