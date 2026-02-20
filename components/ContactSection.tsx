@@ -22,7 +22,7 @@ export default function ContactSection() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+          access_key: '400056b5-085e-4a8c-ab91-dfd12689da1d',
           name: formData.name,
           email: formData.email,
           subject: formData.subject,
