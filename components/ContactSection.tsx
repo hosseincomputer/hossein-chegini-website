@@ -11,11 +11,36 @@ export default function ContactSection() {
     subject: '',
     message: ''
   })
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
+    setStatus('loading')
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        setStatus('success')
+        setFormData({ name: '', email: '', subject: '', message: '' })
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -29,8 +54,8 @@ export default function ContactSection() {
     {
       icon: Mail,
       title: "Email",
-      value: "hosseinc.omputer@gmail.com",
-      link: "mailto:hosseinc.omputer@gmail.com"
+      value: "hossein.computer@gmail.com",
+      link: "mailto:hossein.computer@gmail.com"
     },
     {
       icon: Phone,
@@ -222,13 +247,21 @@ export default function ContactSection() {
               
               <motion.button
                 type="submit"
-                className="w-full px-8 py-4 bg-primary-600 hover:bg-primary-500 text-white rounded-lg transition-all duration-200 border border-primary-600 hover:border-primary-500 flex items-center justify-center gap-2"
+                disabled={status === 'loading'}
+                className="w-full px-8 py-4 bg-primary-600 hover:bg-primary-500 text-white rounded-lg transition-all duration-200 border border-primary-600 hover:border-primary-500 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <Send className="w-5 h-5" />
-                Send Message
+                {status === 'loading' ? 'Sending...' : 'Send Message'}
               </motion.button>
+
+              {status === 'success' && (
+                <p className="text-green-600 text-center font-medium">Message sent successfully! I'll get back to you soon.</p>
+              )}
+              {status === 'error' && (
+                <p className="text-red-600 text-center font-medium">Something went wrong. Please try again or email me directly.</p>
+              )}
             </form>
           </motion.div>
         </div>
