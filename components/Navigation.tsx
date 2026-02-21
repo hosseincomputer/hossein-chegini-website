@@ -31,6 +31,7 @@ export default function Navigation() {
     { id: 'experience', label: 'Experience' },
     { id: 'image-processing', label: 'Image Processing' },
     { id: 'projects', label: 'Projects' },
+    { id: 'articles', label: 'Articles' },
     { id: 'contact', label: 'Contact' }
   ]
 

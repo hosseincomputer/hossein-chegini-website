@@ -7,6 +7,7 @@ import SkillsSection from '@/components/SkillsSection'
 import ExperienceSection from '@/components/ExperienceSection'
 import ImageProcessingSection from '@/components/ImageProcessingSection'
 import ProjectsSection from '@/components/ProjectsSection'
+import ArticlesSection from '@/components/ArticlesSection'
 import ContactSection from '@/components/ContactSection'
 import Navigation from '@/components/Navigation'
 
@@ -24,6 +25,8 @@ export default function Home() {
       <ExperienceSection />
 
       <ProjectsSection />
+
+      <ArticlesSection />
 
       <ContactSection />
       
