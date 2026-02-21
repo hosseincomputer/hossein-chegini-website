@@ -96,12 +96,39 @@ export default function RootLayout({
     },
   }
 
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'AI as a Service (AIaaS): What It Really Means',
+    description: 'Exploring the true meaning of AI-as-a-Service — what it is, why it matters, and how it powers real-world solutions for businesses.',
+    author: {
+      '@type': 'Person',
+      name: 'Hossein Chegini',
+      url: 'https://kasralabs.ai',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Kasralabs',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://kasralabs.ai/kasra_logo.png',
+      },
+    },
+    datePublished: '2026-02-20',
+    mainEntityOfPage: 'https://medium.com/@h.chegini/ai-as-a-service-aiaas-what-it-really-means-335d17745e9b',
+    keywords: ['AI as a Service', 'AIaaS', 'Machine Learning', 'Artificial Intelligence'],
+  }
+
   return (
     <html lang="en" className="scroll-smooth">
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
         />
       </head>
       <body className={`${inter.className} bg-cream-50 text-dark-950 antialiased`}>
