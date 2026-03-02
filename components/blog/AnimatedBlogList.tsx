@@ -1,32 +1,31 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ExternalLink, FileText, Calendar } from 'lucide-react'
 import Link from 'next/link'
-import { articles } from '@/data/articles'
+import { FileText, Calendar, ExternalLink } from 'lucide-react'
+import { Article } from '@/data/articles'
 
-export default function ArticlesSection() {
+export default function AnimatedBlogList({ articles }: { articles: Article[] }) {
   return (
-    <section id="articles" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-dark-950 mb-6">
-            Latest <span className="text-primary-600">Articles</span>
-          </h2>
-          <p className="text-xl text-dark-600 max-w-3xl mx-auto">
-            Insights and technical guides on AI, machine learning, and data engineering.
-          </p>
-        </motion.div>
+    <>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-center mb-16"
+      >
+        <h1 className="text-4xl md:text-5xl font-bold text-dark-950 mb-6">
+          <span className="text-primary-600">Blog</span>
+        </h1>
+        <p className="text-xl text-dark-600 max-w-3xl mx-auto">
+          Insights and technical guides on AI, machine learning, and data engineering.
+        </p>
+      </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {articles.map((article, index) => (
-            <Link key={article.id} href={`/blog/${article.slug}`}>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {articles.map((article, index) => (
+          <Link key={article.id} href={`/blog/${article.slug}`}>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -50,9 +49,9 @@ export default function ArticlesSection() {
                   <span>{new Date(article.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                 </div>
 
-                <h3 className="text-xl font-semibold text-dark-950 mb-3 group-hover:text-primary-700 transition-colors duration-300">
+                <h2 className="text-xl font-semibold text-dark-950 mb-3 group-hover:text-primary-700 transition-colors duration-300">
                   {article.title}
-                </h3>
+                </h2>
                 <p className="text-dark-600 mb-4 leading-relaxed">
                   {article.description}
                 </p>
@@ -69,25 +68,24 @@ export default function ArticlesSection() {
                 </div>
 
                 <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-1 text-primary-600 font-medium group-hover:gap-2 transition-all duration-300">
-                      Read Article
-                    </div>
-                    <a
-                      href={article.mediumUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      className="flex items-center gap-1 text-dark-500 text-sm hover:text-primary-600 transition-colors duration-200"
-                    >
-                      Medium <ExternalLink className="w-3 h-3" />
-                    </a>
+                  <div className="flex items-center gap-1 text-primary-600 font-medium group-hover:gap-2 transition-all duration-300">
+                    Read Article
                   </div>
+                  <a
+                    href={article.mediumUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="flex items-center gap-1 text-dark-500 text-sm hover:text-primary-600 transition-colors duration-200"
+                  >
+                    Medium <ExternalLink className="w-3 h-3" />
+                  </a>
+                </div>
               </div>
             </motion.div>
-            </Link>
-          ))}
-        </div>
+          </Link>
+        ))}
       </div>
-    </section>
+    </>
   )
 }
