@@ -20,6 +20,46 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    id: 2,
+    slug: 'types-of-ai-as-a-service',
+    title: 'Types or Components of AI as a Service',
+    description: 'A breakdown of the three core components of AI as a Service — Data, Model, and Insight — and how they work together to bring unproductionised AI use cases to market.',
+    mediumUrl: 'https://medium.com/@h.chegini/types-or-components-of-ai-as-a-service',
+    date: '2026-03-14',
+    tags: ['AI', 'AIaaS', 'Data', 'Machine Learning'],
+    platform: 'Medium',
+    author: 'Hossein Chegini',
+    readingTime: '2 min read',
+    keywords: ['AI as a Service', 'AIaaS', 'Data Pipeline', 'AI Model', 'Machine Learning', 'AI Insight', 'AI Components'],
+    content: [
+      {
+        heading: 'Unproductionised AI Use Cases',
+        paragraphs: [
+          'In terms of AI services, there are still discussions about how to define, develop, and productionise use cases that are not yet in production. When talking about unproductionised use cases, this means business use cases that still have not had the opportunity to come to the market.',
+          'For these to be developed, we work on different aspects of a software system, especially its AI components, to see how it could be developed to serve its clients well.',
+        ]
+      },
+      {
+        heading: 'AI as a Service: Data',
+        paragraphs: [
+          'Data is the first step of any software pipeline, and it will determine the nature and the structure of an AI project and address how its structure could look. Imagine we have a second-hand market where dresses still do not have a barcode or a tag to be identified. This would be a great opportunity, since second-hand dresses are becoming highly demanded in the market due to values such as their environmentally friendly aspect.',
+        ]
+      },
+      {
+        heading: 'AI as a Service: Model',
+        paragraphs: [
+          'This is the most important component of a software pipeline, which shows the type of an AI service (whether it is prediction, generation, or moderation), and it is the core component. Any AI software would not work without proper modelling. Any model requires training, which again is the most important stage of any AI software.',
+        ]
+      },
+      {
+        heading: 'AI as a Service: Insight',
+        paragraphs: [
+          'There might be cases where we have good data generation and a good model but are not sure how to present it to customers. This is the point where we need to think of a good solution for it, either through good reporting or a web application. This part is not as complicated as modelling, but it still needs special attention.',
+        ]
+      },
+    ]
+  },
+  {
     id: 1,
     slug: 'ai-as-a-service',
     title: 'AI as a Service (AIaaS): What It Really Means',
