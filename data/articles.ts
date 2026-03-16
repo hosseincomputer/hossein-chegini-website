@@ -20,6 +20,51 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    id: 4,
+    slug: 'complex-scenarios-structuring-dbt-models',
+    title: 'Complex Scenarios: Structuring Your Data Build Tool (DBT) Models',
+    description: 'How to apply modular programming principles to SQL using DBT — with a practical shopping example covering staging, intermediate, and final model layers.',
+    mediumUrl: 'https://medium.com/@h.chegini/complex-scenarios-structuring-your-data-build-tool-dbt-models',
+    date: '2024-02-11',
+    tags: ['DBT', 'SQL', 'Data Engineering', 'Analytics'],
+    platform: 'Medium',
+    author: 'Hossein Chegini',
+    readingTime: '5 min read',
+    keywords: ['DBT', 'Data Build Tool', 'SQL modular programming', 'data engineering', 'staging models', 'intermediate models', 'data pipeline', 'analytics engineering'],
+    content: [
+      {
+        heading: 'Introduction',
+        paragraphs: [
+          'We all know of a metaphor called spaghetti programming and how it imposes a huge panic for us for maintenance and testing. Imagine there is a bug in your code and you have spent hours and days and still not sure how to fix it. With spaghetti thinking you should just go through the whole code and try all the streams to see which one is the cause. And after finding the source of error, your panic has just begun. You should fix it by changing a lot of code because your software has been designed in a spaghetti form. And it does not allow us to think clearly and simply for software design.',
+          'Clarity and simplicity are two essential key factors of design and development in any sector of production, particularly in software engineering. This has been achieved in software programming but NOT in database design since years ago. In software, we can think of a complex problem as various sub-problems or smaller problems. This would be the first stage in systematic thinking where we can walk through our clarity and simplicity direction.',
+          'After knowing the sub-problems, the next stage would be how to design a software component to resolve each of the problems. A huge work and research have been conducted in the last decades in this direction to achieve this methodology which is called modular programming or procedural programming. This has resulted in a much better way in design and coding irrespective of the syntax or compile, it could be JAVA, C, C++, Python, PERL, etc. All these programming languages have invested a lot in functions and methods. BUT what about SQL?',
+        ]
+      },
+      {
+        heading: 'Methodology',
+        paragraphs: [
+          'The modularity in all the mentioned compilers is simple: just detect the strings of input-output inside a problem and define a function for it. This works best and is the basis of procedural programming. So how can we achieve this in a database programming language such as SQL?',
+          'Answer: Think as atomic as you can and try to define integrations as the JOIN operations we use in SQL. There are three layers in DBT design: Staging (to prepare data from a single table), Intermediate models (as a transformation layer for joins), and Final models (integration of the previous layers for final output).',
+          'In a shopping example, the staging layer prepares raw data from individual tables: orders, order items, products, customers, product reviews, and suppliers — each with its own dedicated staging model (stg_orders.sql, stg_order_items.sql, stg_products.sql, stg_customer.sql, stg_product_review.sql, stg_suppliers.sql).',
+        ]
+      },
+      {
+        heading: 'Intermediate and Final Layers',
+        paragraphs: [
+          'Once we have all the data ready from the staging layer, we can now transform them together with SQL operations to make it closer to the final result. Filtering, grouping, summing, averaging, and conditional statements are the SQL operations used in this layer. Key intermediate models include: int_order_details.sql (combines orders and order items for detailed insights) and int_sales.sql (creates a sales fact table aggregating sales data), and int_product_reviews.sql (aggregates product review scores).',
+          'In the final integration stage, we integrate the intermediate and staging models as designed to provide data close to the final output — for example, fin_customer_analytics, which integrates staging and intermediate models to produce the final results.',
+          'In more complex cases, we need to think about how to break down the situation into more models. We might need to define more staging models, perform additional transformations, integrate more DBT models — but we should never try to cope with complexity using a single complex SQL query.',
+        ]
+      },
+      {
+        heading: 'Conclusion',
+        paragraphs: [
+          'DBT is indeed a key technology in bringing modularity and reusability to SQL programming. The DBT platform allows for the definition and design of models and modules that are atomic and can be reused in many use cases. The join operation serves as the main connection point of DBT models and is better utilized in the intermediate or final stages. A DBT diagram provides another view of how different DBT models collaborate for a single result, which is a beneficial aspect of database engineering.',
+        ]
+      },
+    ]
+  },
+  {
     id: 3,
     slug: 'is-gpt5-better-at-code-generation-and-debugging',
     title: 'Is GPT-5 Better at Code Generation and Debugging? Not Really',
