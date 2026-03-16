@@ -20,6 +20,59 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    id: 3,
+    slug: 'is-gpt5-better-at-code-generation-and-debugging',
+    title: 'Is GPT-5 Better at Code Generation and Debugging? Not Really',
+    description: 'A hands-on experiment comparing GPT-5 and GPT-4.5 Turbo for SQL debugging — and why GPT-5 may have hit the S-curve ceiling of LLM performance.',
+    mediumUrl: 'https://medium.com/@h.chegini/is-gpt-5-better-at-code-generation-and-debugging-not-really-6ab94d422fa6',
+    date: '2025-08-15',
+    tags: ['GPT-5', 'LLM', 'AI', 'Debugging', 'Code Generation'],
+    platform: 'Medium',
+    author: 'Hossein Chegini',
+    readingTime: '5 min read',
+    keywords: ['GPT-5', 'GPT-4.5', 'code generation', 'AI debugging', 'LLM performance', 'SQL debugging', 'ChatGPT', 'overfitting', 'S-curve'],
+    content: [
+      {
+        heading: 'The Motivation',
+        paragraphs: [
+          'The motivation for writing this story comes from an experiment I ran last week: debugging one of my SQL queries and seeing how the new GPT model helped me resolve the error quickly. I already saw clear improvements after the new model\'s release when I compared it with previous versions. It was great to see how GPT-4o improved on its predecessor, GPT-3.5, and how o3 did the same compared to GPT-4o.',
+          'After a long wait, OpenAI released its most advanced and sophisticated model, GPT-5, last week. It comes in two modes: Auto, Fast and Thinking. The Fast mode is designed to answer straightforward questions quickly, while the Thinking mode provides Chain-of-Thought (CoT) capability, which was attached to the previous model, starting from o1 leading to o3. And by auto the model can switch to either fast or thinking from the question.',
+          'This means you\'ll lose access to the previous models like o3, GPT-4 Turbo, and GPT-4.5 Turbo. The reasoning is that GPT-5 includes the Thinking capability, so it can handle most o3-style tasks. However, based on my first debugging experiment, I came to the conclusion that GPT-5 is weaker than GPT-4.5 Turbo at coding and debugging.',
+        ]
+      },
+      {
+        heading: 'A SQL Use Case',
+        paragraphs: [
+          'After encountering an SQL error, I tried debugging it with GPT-5. After a few iterations, I felt it had deficiencies in identifying the source of the bug, providing clear reasoning, and fixing it. I concluded that it struggled at three stages of code debugging: pinpointing the root cause, explaining the reasoning to the user, and implementing and verifying a working fix.',
+          'My test for unique rows failed, and the code wasn\'t even that big. After the first prompt, it added about 50 lines with two CTEs, and the problem was still there. In my second prompt, after testing, I asked it to take a closer look and fix the duplicates, but it produced another 40 lines of SELECT subquery code with the same error. In my third prompt, I asked it to just fix the existing code, but it couldn\'t — what I got was more text and explanations about the code it had generated.',
+          'So, a bit bored, I switched to my traditional way of debugging — Googling the error, finding the relevant Stack Overflow pages, understanding the solution, trying it out, and testing — and after a few minutes the answer was simply to add DISTINCT before my SELECT. Can you believe it? I added DISTINCT, the duplicates disappeared, and the error was fixed. My original code was about 70 lines, but after my prompts it ballooned to around 170 — with the error still there — even though the smart answer was just one word: DISTINCT.',
+        ]
+      },
+      {
+        heading: 'GPT-5 More Talkative and Less to the Point',
+        paragraphs: [
+          'Comparing my GPT-4.5 vs GPT-5 debugging experiments, the following were obvious: GPT-5 is more talkative unless you limit its tokens in the prompt. It hallucinates a bit more than its ancestors (o3 and GPT-4.5). It needs more prompting from the user to finish tasks. It\'s less sharp at error detection than GPT-4.5.',
+          'An error that GPT-4.5 solved in ~1,000 tokens took GPT-5 at least ~2,000 tokens. Why? And why does GPT-5 have some serious deficiencies compared with its ancestors? Maybe the answer involves the S-model — what is it?',
+        ]
+      },
+      {
+        heading: 'The S Model',
+        paragraphs: [
+          'Whether you\'ve started learning chess, taken up golf as your favorite sport, or begun a martial art, you probably noticed rapid progress in the first few years — and far subtler gains later. You can keep increasing your expertise in any field, but there\'s a ceiling: early improvements are big; later improvements get smaller even as you practice more. This doesn\'t mean you\'re lazy or not putting in effort — it\'s simply how learning tends to work.',
+          'For example, in chess you might reach ~1900 after two years, ~2000 after three, and — ten years in — top out around ~2150. The increments shrink as you approach your current limit. This is the classic S-curve of learning: fast growth at the start, then a long plateau.',
+          'The first model in the family, GPT-1, aimed to converse more naturally. GPT-3.5 was a major achievement for answering questions and coding. With GPT-4o and GPT-4.5, performance improved further — better at detecting errors, solving more complex problems, and providing suggestions. GPT-o3 introduced chain-of-thought (CoT) reasoning. GPT-5, however, seems to sit at the peak of the S-curve.',
+        ]
+      },
+      {
+        heading: 'The GPTs and the Problem of Overfitting',
+        paragraphs: [
+          'In ML we have a classic problem called overfitting: strong performance on the training set doesn\'t necessarily mean the model will perform well on new data. To improve a model we might add more iterations, layers/neurons, or tune learning parameters, but there\'s a point where adding more can make the model worse — for GPT-style systems, that can mean lower accuracy on questions, weaker bug-fixing, and poorer performance on novel problems that weren\'t in the internet-scale training data.',
+          'Overfitting (and diminishing returns) in GPTs can arise when teams scale up GPUs and Transformers — vertically (deeper) and horizontally (wider) — to make models larger and more powerful. But there\'s a ceiling: more hardware or bigger models alone may not help, and further gains likely require better data, objectives, and techniques. If these are real limits of current LLMs, then the idea of a technological singularity may still be some distance away.',
+        ]
+      },
+    ]
+  },
+  {
     id: 2,
     slug: 'types-of-ai-as-a-service',
     title: 'Types or Components of AI as a Service',
