@@ -20,6 +20,57 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    id: 8,
+    slug: 'evolution-of-automation-jacquard-to-chatbots',
+    title: 'Stitched in Time: The Evolution of Automation from Jacquard to Chatbots',
+    description: 'A historical journey through automation — from ancient Egyptian water clocks and the Jacquard loom to the steam engine, the Internet, deep learning, and ChatGPT.',
+    mediumUrl: 'https://medium.com/@h.chegini/stitched-in-time-the-evolution-of-automation-from-jacquard-to-chatbots',
+    date: '2023-05-28',
+    tags: ['Automation', 'AI', 'History', 'ChatGPT'],
+    platform: 'Medium',
+    author: 'Hossein Chegini',
+    readingTime: '4 min read',
+    keywords: ['automation history', 'Jacquard loom', 'industrial revolution', 'artificial intelligence', 'ChatGPT', 'deep learning', 'neural networks', 'Industry 4.0', 'cognitive automation'],
+    content: [
+      {
+        heading: 'Introduction',
+        paragraphs: [
+          'We cannot pinpoint an exact moment that marked the start of automation — a process that transferred human physical effort and thought into mechanical operations. However, historical records show that ancient Egyptians made notable strides in automation, crafting water clocks, water bridges, and harnessing wind power for irrigating agricultural lands.',
+          'In the present day, if we distill complex processes down to their basic elements, we can trace a parallel between innovations like James Watt\'s steam engine and the Jacquard loom. These inventions marked a significant step in transferring human muscle power and energy into machines. Despite some initial errors, these machines offered scalability and efficiency, producing similar results to human labor, but in less time and with less effort.',
+          'It became apparent that both weaving machines and the steam engine greatly reduced human labor. The steam engine replaced the tedious work performed by lines of workers, much like the weaving machine, which automated the demanding task of weaving.',
+        ]
+      },
+      {
+        heading: 'The Birth of Automation',
+        paragraphs: [
+          'The concept of freeing human muscles through innovative techniques, shifting physical labor to mechanical operations, continued to drive scientific study and research. The use of the steam engine expanded to encompass various modes of transportation such as railways, ships, and road vehicles. These profound transformations, known as "Industry 2.0", revolutionized land and sea travel.',
+          'A notable characteristic of this second industrial revolution was the standardization of parts. In factories, complex tasks were broken down into smaller, manageable components, allowing large tasks to be completed in shorter time frames. Pumps, sewing machines, bicycles, and seed drills served as further examples of this industrial shift.',
+        ]
+      },
+      {
+        heading: 'The Digital Age',
+        paragraphs: [
+          'Numerous scientists have acknowledged that one of the major breakthroughs of this era came via communication technologies such as the steamboat, telephone, and telegraph. The invention of the telephone was a pivotal event, making geographical distances seem insignificant and laying the foundation for computer communications.',
+          'Charles Babbage, creator of the first mechanical computer — a device bearing similarities to the Jacquard loom — helped usher in "Industry 3.0". The Advanced Research Projects Agency Network (ARPANET) in 1969 integrated disparate network switches into what we now know as the Internet, a key milestone in the progress of Industry 3.0.',
+        ]
+      },
+      {
+        heading: 'Artificial Intelligence and Modern Automation',
+        paragraphs: [
+          'The ambition to automate was not confined to physical labor, but extended to cognitive tasks as well. A paper on the application of Neural Networks in logical functions marked the advent of a "Logical Calculus of Ideas". In 1951, the first neural network was designed, simulating a calculator with 40 neurons.',
+          'IBM deployed the first machine learning-based software tool for translation tasks on textual data in 1988. By 2012, convolutional neural networks (CNNs) were being used for visual recognition tasks, achieving an error rate of only 16%. Researchers also looked to nature as a guide, replicating optimization tasks observed in plants and animals — giving rise to new methods like the Genetic Algorithm (GA) and Evolutionary Computation (EC).',
+        ]
+      },
+      {
+        heading: 'ChatGPT and the Future of Automation',
+        paragraphs: [
+          'Automation today revolves around translating diverse operations, regardless of their complexity, into machine-performable tasks. Machines can now perform complex human tasks such as prediction, assessment, and classification. AI and ML technologies are driving the automation of cognitive tasks, once the sole domain of the human brain.',
+          'ChatGPT represents an example of automation in the realm of language production. Language — one of the most profound distinctions between humans and other species — is now within the purview of automation. This prompts critical self-reflection: Is there anything left to automate beyond human muscle power and cognition? Have we reached an era where there is nothing left to automate in human abilities?',
+        ]
+      },
+    ]
+  },
+  {
     id: 7,
     slug: 'why-pay-attention-to-attentions-in-llms',
     title: 'Why We Should Pay Attention to Attentions in LLMs?',
