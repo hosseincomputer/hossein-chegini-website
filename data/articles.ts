@@ -20,6 +20,50 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    id: 7,
+    slug: 'why-pay-attention-to-attentions-in-llms',
+    title: 'Why We Should Pay Attention to Attentions in LLMs?',
+    description: 'A clear explanation of why attention mechanisms are critical in Large Language Models — with a practical comparison showing the difference between LLM responses with and without attention.',
+    mediumUrl: 'https://medium.com/@h.chegini/why-we-should-pay-attention-to-attentions-in-llms',
+    date: '2023-11-07',
+    tags: ['LLM', 'Attention', 'NLP', 'Deep Learning'],
+    platform: 'Medium',
+    author: 'Hossein Chegini',
+    readingTime: '3 min read',
+    keywords: ['attention mechanism', 'LLM', 'large language model', 'NLP', 'transformer', 'ChatGPT', 'deep learning', 'query key value', 'attention is all you need'],
+    content: [
+      {
+        heading: 'Introduction',
+        paragraphs: [
+          'In the context of deep learning and NLP, understanding the related components of the learning context, whether text or image, is extremely important. A successful model responsible for learning a piece of text or an image should perceive them not as separate chunks but as a cohesive integration.',
+          'To achieve meaningful and cohesive answers, attention plays a crucial role in Large Language Models (LLM) and AI generative texts. If the LLM incorporates attention mechanisms, the answers will exhibit a coherent flow. Without attention, the model will simply select the nearest sentences from the knowledge base, lacking any meaningful relationships. While individual sentences may have the highest correlation with the query, they won\'t possess inherent coherence among themselves.',
+        ]
+      },
+      {
+        heading: 'Methodology',
+        paragraphs: [
+          'To clarify the topic of attention, we can consider two LLM models: the first one with an attention component and the second one without it. The first model possesses knowledge about meaningful relationships among words and sentences, while the second one lacks this capability.',
+          'In the context of LLM, the three matrices — query, key, and value — store the attention information. The query and key assist in understanding the embeddings, while the value is used for predicting the next word.',
+          'We used ChatGPT 4.0 to test our hypothesis by posing the following question to both models: "In pleasant weather and with a good camera, how can I choose the best spot for taking photos?"',
+        ]
+      },
+      {
+        heading: 'Results: With vs Without Attention',
+        paragraphs: [
+          'The model without attention produced chunky, incohesive responses: "The camera should have a significant impact." / "Weather and other climate conditions are extremely important for taking photos." / "The best spot could be anywhere; try your best." / "The best photos will always happen."',
+          'The model with attention produced structured, coherent responses: "Check the weather forecast to plan the timing of your shoot." / "Research scenic locations and their peak times for photography." / "Use your camera\'s settings to match the lighting conditions." / "Compose your shot with attention to the background and natural features."',
+          'Comparing the two answers, we can see the chunky and incohesive nature of the first model\'s response, whereas the second answer exhibits a strong relationship between items, a well-structured order, and a smooth flow of text.',
+        ]
+      },
+      {
+        heading: 'Conclusion',
+        paragraphs: [
+          'This case study highlights the impact of the attention component in text understanding and generation within the OpenAI ChatGPT architecture. With attention, an LLM model can extract the most relevant parts of a query while disregarding less important ones. It enables the model to comprehend pronouns, two-sided words, and related sentences more effectively, resulting in the generation of coherent answers for queries.',
+        ]
+      },
+    ]
+  },
+  {
     id: 6,
     slug: 'exploring-yolo-deep-network-analysis',
     title: 'Exploring YOLO: A Deep Network Analysis',
