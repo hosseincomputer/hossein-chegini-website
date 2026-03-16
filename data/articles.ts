@@ -20,6 +20,67 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    id: 5,
+    slug: 'genetic-algorithms-essential-introduction',
+    title: 'Genetic Algorithms: An Essential Introduction — From Understanding Nature to Coding',
+    description: 'A comprehensive introduction to Genetic Algorithms — covering genes, chromosomes, mutation, crossover, fitness functions, and a hands-on Python implementation solving the N-Queen problem.',
+    mediumUrl: 'https://medium.com/@h.chegini/genetic-algorithms-an-essential-introduction-from-understanding-nature-to-coding',
+    date: '2023-06-23',
+    tags: ['Genetic Algorithms', 'AI', 'Python', 'Optimization'],
+    platform: 'Medium',
+    author: 'Hossein Chegini',
+    readingTime: '11 min read',
+    keywords: ['genetic algorithm', 'GA', 'N-Queen problem', 'optimization', 'evolutionary computation', 'mutation', 'crossover', 'fitness function', 'Python AI'],
+    content: [
+      {
+        heading: 'Introduction',
+        paragraphs: [
+          '"Nature is the best teacher, for she reveals her secrets to those who are curious and eager to learn." — Francis Bacon',
+          'Survival and reproduction are fundamental aspects of life that are essential for the continuation of species, including plants, animals, and humans. While the methods of reproduction may differ, they all follow the same mechanisms and strategies to ensure survival.',
+          'In computer science, one of the most influential models inspired by nature is the Genetic Algorithm (GA). GA is a fundamental algorithm used for solving optimization problems by mimicking the main process of survival observed in nature. To better understand GA, there are four key terms and topics that are essential to grasp: population, fitness function, selection, and mutation.',
+        ]
+      },
+      {
+        heading: 'Key Terms: Gene, Chromosome, Mutation, and Crossover',
+        paragraphs: [
+          'A gene is a unit of heredity responsible for transmitting genetic information from one generation to the next. In genetic algorithms, genes serve as a representation of potential solutions to a problem and can be manipulated by genetic operators such as mutation and crossover.',
+          'A chromosome is a structure made of genes that carry information. It is the main component in DNA, and its patterns determine the traits, attributes, and behaviors of existences.',
+          'Mutation is a fundamental operation in genetic algorithms involving the random alteration of a small number of genes in a chromosome. Crossover is another fundamental operation in which genetic information is exchanged between two or more chromosomes — similar to the exchange of genetic material between parents during sexual reproduction.',
+        ]
+      },
+      {
+        heading: 'N-Queen Problem: A Case Study for GA',
+        paragraphs: [
+          'One of the classic challenges in chess is the N-Queen problem. The objective is to place N queens on an NxN chessboard such that no two queens are attacking each other — no two queens can share the same row, column, or diagonal.',
+          'A fitness function is used to evaluate the quality of each candidate solution, such as the number of non-attacking queen pairs. The goal is to find the solution with the highest fitness value that satisfies the problem constraints.',
+          'To solve any GA problem, the following steps are typically followed: encode the problem to a chromosome, define a population of chromosomes with random genes, apply GA operations and evaluate fitness, sort chromosomes by fitness keeping the stronger ones, and repeat until a solution is found.',
+        ]
+      },
+      {
+        heading: 'Encoding and Fitness Score',
+        paragraphs: [
+          'Encoding is the first and crucial step in defining a chromosome. For the N-Queen problem, each queen is represented by its row position. For example, the chromosome [4,3,2,1] represents the first queen in the fourth row, the second in the third row, etc.',
+          'The fitness score measures how close a chromosome is to a solution. For the N-Queen problem, fitness is defined as the number of times queens are attacking each other. A fitness score of 0 means no queens are attacking each other — a valid solution. Higher scores indicate more conflicts and weaker chromosomes.',
+        ]
+      },
+      {
+        heading: 'Code Implementation',
+        paragraphs: [
+          'The main file (n_queen_solver.py) serves as the entry point for setting up the GA model. It prompts the user for chromosome size (chessboard size), population size, and number of epochs (training iterations).',
+          'The fitness function checks whether two queens in the chromosome are crossing each other. Using the reciprocal formula 1/(q+0.001), chromosomes with fewer queen collisions receive higher fitness scores. When the fitness score reaches 1000, the solution is found and training stops.',
+          'The GA employs a selection process to choose parents with higher fitness scores for reproduction through mutation. The resulting offspring replace chromosomes with lower fitness scores. The algorithm has been tested successfully on 8-Queen, 25-Queen, and 100-Queen problems.',
+        ]
+      },
+      {
+        heading: 'Conclusion',
+        paragraphs: [
+          'This article provides a comprehensive introduction to Genetic Algorithms, covering encoding, mutation, fitness scoring, and selection as its fundamental stages. GA is a powerful tool for solving optimization problems by mimicking natural selection. The N-Queen problem serves as an excellent case study demonstrating how nature-inspired algorithms can solve complex combinatorial challenges efficiently.',
+          'Can you propose another problem that could be solved using a genetic algorithm? The encoding process is a crucial aspect — how would you approach a different optimization problem?',
+        ]
+      },
+    ]
+  },
+  {
     id: 4,
     slug: 'complex-scenarios-structuring-dbt-models',
     title: 'Complex Scenarios: Structuring Your Data Build Tool (DBT) Models',
