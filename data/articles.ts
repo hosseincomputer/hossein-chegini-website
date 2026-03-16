@@ -20,6 +20,65 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    id: 6,
+    slug: 'exploring-yolo-deep-network-analysis',
+    title: 'Exploring YOLO: A Deep Network Analysis',
+    description: 'A visual investigation into how YOLO processes images layer by layer — exploring convolutions, batch normalization, and how deep CNNs transform pixel data into object detections.',
+    mediumUrl: 'https://medium.com/@h.chegini/exploring-yolo-a-deep-network-analysis',
+    date: '2023-05-20',
+    tags: ['YOLO', 'Computer Vision', 'Deep Learning', 'CNN'],
+    platform: 'Medium',
+    author: 'Hossein Chegini',
+    readingTime: '9 min read',
+    keywords: ['YOLO', 'object detection', 'deep learning', 'CNN', 'convolutional neural network', 'computer vision', 'image processing', 'YOLOv3', 'batch normalization'],
+    content: [
+      {
+        heading: 'Motivation',
+        paragraphs: [
+          'When I began my professional journey with deep learning algorithms for image processing and object detection/classification, such as Mask R-CNN, YOLO, and SSD, several questions kept intriguing me: How do these models perceive images? What transformations do the images undergo as they traverse the entire pipeline of a deep convolutional neural network (CNN)? What changes occur to make the images more meaningful from a machine\'s perspective?',
+          'Answering these questions provides us with a deeper understanding of how the model perceives and processes images as they pass through the layers of a CNN. By analyzing the changes in pixels and observing the transformations from pixel-wise to segment-wise to detection-wise, we can gain insights into how the model extracts features and detects objects.',
+          'In my quest for answers, I sought a methodology that could shed light on these questions. Through research, I discovered a way to gain insights by analyzing image slices at different stages of the CNN pipeline. To simplify the process, I chose a straightforward image: a cup placed in the center of a plain background. By using a simple object with no intricate patterns or textured areas, I aimed to observe how the cup\'s representation evolved throughout the network.',
+        ]
+      },
+      {
+        heading: 'YOLO Setup',
+        paragraphs: [
+          'For this investigation, I selected YOLO as my deep learning model of choice. YOLO (You Only Look Once) is a widely adopted model for image processing and offered a suitable framework for my exploration. Among its various versions, I selected YOLO version 3 for this experiment.',
+          'The setup involves loading the image, configuring YOLO\'s backend and target, transforming the image into a blob format compatible with YOLO, and running the forward process to allow the image to traverse the YOLO network. The network is loaded using cv2.dnn.readNetFromDarknet with the yolov3.cfg and yolov3.weights files, and the blob is created with a resolution of 320x320.',
+        ]
+      },
+      {
+        heading: 'YOLO Layers',
+        paragraphs: [
+          'The YOLO network consists of 254 distinct layers, which can be categorized into different types: convolutional (conv), batch normalization (bn), leaky ReLU (leaky), and shortcut layers. Each layer has associated dimensions indicating the size of the data and computational requirements.',
+          'In YOLO, there are three key layer types: Leaky — applies a leaky ReLU function enabling suppression of some pixel values; Bn (Batch Normalization) — normalizes pixel values with zero mean and standard deviation of one; Conv — the convolutional layer, which involves sliding a filter across the entire image.',
+          'As we traverse through the network in the forward direction, YOLO enriches the image with additional features and meaning. The data undergoes a reduction in resolution and size but gains more features — indicating a shift from a pixel-wise representation to a feature-wise representation.',
+        ]
+      },
+      {
+        heading: 'Computational Analysis',
+        paragraphs: [
+          'To gain insights into the layer dimensions, I collected the shapes of each layer and multiplied them together to calculate the "computational box" associated with each layer. For instance, if a layer has dimensions of [1, 64, 10, 10], the computational box would be 6400.',
+          'The analysis reveals an interesting pattern: the network performs substantial computations at the initial stages when it receives the input image. As the image traverses through the network, its size is gradually reduced, resulting in a significant decrease in computational requirements. However, towards the latter layers (after layer 200), there is a slight increase in computational intensity as the data has accumulated additional complexities.',
+        ]
+      },
+      {
+        heading: "YOLO's Vision: How the Network Sees",
+        paragraphs: [
+          'By plotting the images at each layer\'s output, I observed the visual transformations. The visualization showcases the 10 outputs of the conv_0 layer along with their corresponding batch normalization layer. Each image retains a size of 320, consistent with the input dimensions. Notably, batch normalization tends to darken the images.',
+          'Over a span of 100 layers (from layer 82 to layer 184), the image experiences a loss in resolution while gaining improved contrast through lighter and darker pixels. This raises important questions: Does resolution reduction enhance detection? Does higher contrast improve accuracy? Does darkening facilitate feature extraction?',
+          'The answers: Higher resolution provides more information and better edge discrimination (YES to question 1). Higher contrast between foreground and background makes detection easier and more accurate (YES to question 2). Higher contrast facilitates edge detection and object boundary recognition, leading to more accurate bounding boxes (YES to question 3). The relationship between lighting conditions and detection performance remains an interesting area for further experimentation.',
+        ]
+      },
+      {
+        heading: 'Conclusion',
+        paragraphs: [
+          'This investigation into YOLO\'s layer-by-layer processing reveals how deep CNNs transform raw pixel data into meaningful detections. The network progressively darkens and reduces image resolution while extracting richer features — trading spatial resolution for semantic richness. Understanding these computational patterns provides valuable insights into why certain images are easier to detect than others, and how image preprocessing and manipulation can improve detection accuracy.',
+        ]
+      },
+    ]
+  },
+  {
     id: 5,
     slug: 'genetic-algorithms-essential-introduction',
     title: 'Genetic Algorithms: An Essential Introduction — From Understanding Nature to Coding',
