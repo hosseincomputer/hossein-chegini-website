@@ -9,6 +9,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
+  const solutionSlugs = [
+    'crawler',
+    'bot-design',
+    'image-processing',
+    'geo-map-optimisation',
+    'insight-generation',
+  ]
+
+  const solutionPages = solutionSlugs.map((slug) => ({
+    url: `https://kasralabs.ai/solutions/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
+
   return [
     {
       url: 'https://kasralabs.ai',
@@ -22,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+    ...solutionPages,
     ...blogPages,
   ]
 }
