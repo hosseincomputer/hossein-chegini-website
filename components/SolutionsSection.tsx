@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Search, Bot, Map, BarChart3, ArrowRight } from 'lucide-react'
+import { Search, Bot, Map, BarChart3, ScanSearch, ArrowRight } from 'lucide-react'
 
 const solutions = [
   {
@@ -26,6 +26,17 @@ const solutions = [
     border: 'border-blue-500/20 hover:border-blue-500/40',
     iconColor: 'text-blue-400',
     tagBg: 'bg-blue-500/10 text-blue-400 border-blue-500/20',
+  },
+  {
+    slug: 'image-processing',
+    title: 'Image Processing',
+    description: 'Computer vision and image analysis — leaf disease detection, plant classification, and object recognition using deep learning models.',
+    icon: ScanSearch,
+    tags: ['Computer Vision', 'Python', 'Deep Learning'],
+    color: 'from-pink-900/20 to-dark-800',
+    border: 'border-pink-500/20 hover:border-pink-500/40',
+    iconColor: 'text-pink-400',
+    tagBg: 'bg-pink-500/10 text-pink-400 border-pink-500/20',
   },
   {
     slug: 'geo-map-optimisation',

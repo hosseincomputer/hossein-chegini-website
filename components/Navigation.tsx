@@ -41,7 +41,6 @@ export default function Navigation() {
     { id: 'hero', label: 'Home' },
     { id: 'skills', label: 'Skills' },
     { id: 'experience', label: 'Experience' },
-    { id: 'image-processing', label: 'Image Processing' },
     { id: 'articles', label: 'Articles' },
     { id: 'contact', label: 'Contact' }
   ]
@@ -49,6 +48,7 @@ export default function Navigation() {
   const solutionItems = [
     { href: '/solutions/crawler', label: 'Crawler' },
     { href: '/solutions/bot-design', label: 'Bot Design' },
+    { href: '/solutions/image-processing', label: 'Image Processing' },
     { href: '/solutions/geo-map-optimisation', label: 'Geo Map Optimisation' },
     { href: '/solutions/insight-generation', label: 'Insight Generation' },
   ]
@@ -82,7 +82,7 @@ export default function Navigation() {
           </motion.div>
           
           <div className="hidden md:flex space-x-8 items-center">
-            {navItems.slice(0, 4).map((item) => (
+            {navItems.slice(0, 3).map((item) => (
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
@@ -132,7 +132,7 @@ export default function Navigation() {
               </AnimatePresence>
             </div>
 
-            {navItems.slice(4).map((item) => (
+            {navItems.slice(3).map((item) => (
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
