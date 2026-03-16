@@ -1,13 +1,25 @@
 'use client'
 
 import { motion, AnimatePresence } from 'framer-motion'
-import { useState, useEffect } from 'react'
-import Image from 'next/image'
-import { X } from 'lucide-react'
+import { useState, useEffect, useRef } from 'react'
+import Link from 'next/link'
+import { X, ChevronDown } from 'lucide-react'
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setIsSolutionsOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,9 +42,15 @@ export default function Navigation() {
     { id: 'skills', label: 'Skills' },
     { id: 'experience', label: 'Experience' },
     { id: 'image-processing', label: 'Image Processing' },
-    { id: 'projects', label: 'Projects' },
     { id: 'articles', label: 'Articles' },
     { id: 'contact', label: 'Contact' }
+  ]
+
+  const solutionItems = [
+    { href: '/solutions/crawler', label: 'Crawler' },
+    { href: '/solutions/bot-design', label: 'Bot Design' },
+    { href: '/solutions/geo-map-optimisation', label: 'Geo Map Optimisation' },
+    { href: '/solutions/insight-generation', label: 'Insight Generation' },
   ]
 
   return (
@@ -63,8 +81,58 @@ export default function Navigation() {
             <span className="text-xl font-bold text-primary-700">Kasra Analytics</span>
           </motion.div>
           
-          <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
+          <div className="hidden md:flex space-x-8 items-center">
+            {navItems.slice(0, 4).map((item) => (
+              <motion.button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="text-dark-700 hover:text-primary-700 transition-colors duration-200 relative group"
+                whileHover={{ y: -2 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+                {item.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 transition-all duration-300 group-hover:w-full"></span>
+              </motion.button>
+            ))}
+
+            {/* Solutions dropdown */}
+            <div className="relative" ref={dropdownRef}>
+              <motion.button
+                onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
+                className="flex items-center gap-1 text-dark-700 hover:text-primary-700 transition-colors duration-200 relative group"
+                whileHover={{ y: -2 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+                Solutions
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isSolutionsOpen ? 'rotate-180' : ''}`} />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 transition-all duration-300 group-hover:w-full"></span>
+              </motion.button>
+
+              <AnimatePresence>
+                {isSolutionsOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-8 left-0 w-52 bg-cream-100/95 backdrop-blur-md border border-primary-500/20 rounded-xl shadow-lg overflow-hidden z-50"
+                  >
+                    {solutionItems.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={() => setIsSolutionsOpen(false)}
+                        className="block px-4 py-3 text-dark-700 hover:text-primary-700 hover:bg-primary-500/10 transition-all duration-200 text-sm"
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {navItems.slice(4).map((item) => (
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
@@ -119,6 +187,22 @@ export default function Navigation() {
                 >
                   {item.label}
                 </motion.button>
+              ))}
+              <div className="px-4 py-2 text-xs font-semibold text-primary-600 uppercase tracking-wider">Solutions</div>
+              {solutionItems.map((item, index) => (
+                <motion.div key={item.href}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: (navItems.length + index) * 0.05 }}
+                >
+                  <Link
+                    href={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block w-full text-left px-6 py-3 text-dark-700 hover:text-primary-700 hover:bg-primary-500/10 rounded-lg transition-all duration-200 text-sm"
+                  >
+                    {item.label}
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </motion.div>

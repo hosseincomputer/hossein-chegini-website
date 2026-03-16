@@ -1,12 +1,12 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowDown, Github, Linkedin, Mail, Brain, Database, Code, Sparkles } from 'lucide-react'
+import { ArrowDown } from 'lucide-react'
 import HeroSection from '@/components/HeroSection'
 import SkillsSection from '@/components/SkillsSection'
 import ExperienceSection from '@/components/ExperienceSection'
 import ImageProcessingSection from '@/components/ImageProcessingSection'
-import ProjectsSection from '@/components/ProjectsSection'
+import SolutionsSection from '@/components/SolutionsSection'
 import ArticlesSection from '@/components/ArticlesSection'
 import ContactSection from '@/components/ContactSection'
 import Navigation from '@/components/Navigation'
@@ -20,11 +20,11 @@ export default function Home() {
 
       <ImageProcessingSection />
 
+      <SolutionsSection />
+
       <SkillsSection />
 
       <ExperienceSection />
-
-      <ProjectsSection />
 
       <ArticlesSection />
 
