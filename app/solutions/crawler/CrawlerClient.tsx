@@ -116,29 +116,26 @@ export default function CrawlerClient() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
-                className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+                className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-start justify-center overflow-y-auto"
                 onClick={() => setLightboxOpen(false)}
               >
-                <motion.div
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  exit={{ scale: 0.9, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                  className="relative max-w-6xl w-full"
-                  onClick={(e) => e.stopPropagation()}
+                <button
+                  onClick={() => setLightboxOpen(false)}
+                  className="fixed top-4 right-4 z-50 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors"
                 >
-                  <button
-                    onClick={() => setLightboxOpen(false)}
-                    className="absolute -top-4 -right-4 z-10 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors"
-                  >
-                    <X className="w-5 h-5 text-dark-700" />
-                  </button>
-                  <img
-                    src="/solutions/scrawler_diagram.jpeg"
-                    alt="Crawler architecture diagram"
-                    className="w-full h-auto rounded-xl shadow-2xl"
-                  />
-                </motion.div>
+                  <X className="w-6 h-6 text-dark-700" />
+                </button>
+                <motion.img
+                  initial={{ scale: 0.95, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.95, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  src="/solutions/scrawler_diagram.jpeg"
+                  alt="Crawler architecture diagram"
+                  className="w-full max-w-none my-8 px-4 cursor-default"
+                  style={{ minWidth: '100%' }}
+                  onClick={(e) => e.stopPropagation()}
+                />
               </motion.div>
             )}
           </AnimatePresence>
