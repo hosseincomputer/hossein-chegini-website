@@ -1,11 +1,14 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { ArrowLeft, Search } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { ArrowLeft, Search, X, ZoomIn } from 'lucide-react'
+import { useState } from 'react'
 import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 
 export default function CrawlerClient() {
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-cream-50 via-cream-100 to-cream-200">
       <Navigation />
@@ -87,14 +90,58 @@ export default function CrawlerClient() {
             className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-primary-500/20 shadow-sm mb-12"
           >
             <h2 className="text-2xl font-bold text-dark-800 mb-6">Architecture</h2>
-            <div className="rounded-xl overflow-hidden border border-primary-500/10">
+            <div
+              className="relative rounded-xl overflow-hidden border border-primary-500/10 cursor-zoom-in group"
+              onClick={() => setLightboxOpen(true)}
+            >
               <img
                 src="/solutions/scrawler_diagram.jpeg"
                 alt="Crawler architecture diagram"
                 className="w-full h-auto object-contain"
               />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-200 flex items-center justify-center">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-white/90 rounded-full p-3 shadow-lg">
+                  <ZoomIn className="w-6 h-6 text-dark-700" />
+                </div>
+              </div>
             </div>
+            <p className="text-sm text-dark-500 text-center mt-3">Click image to enlarge</p>
           </motion.div>
+
+          {/* Lightbox */}
+          <AnimatePresence>
+            {lightboxOpen && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+                onClick={() => setLightboxOpen(false)}
+              >
+                <motion.div
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.9, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="relative max-w-6xl w-full"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <button
+                    onClick={() => setLightboxOpen(false)}
+                    className="absolute -top-4 -right-4 z-10 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors"
+                  >
+                    <X className="w-5 h-5 text-dark-700" />
+                  </button>
+                  <img
+                    src="/solutions/scrawler_diagram.jpeg"
+                    alt="Crawler architecture diagram"
+                    className="w-full h-auto rounded-xl shadow-2xl"
+                  />
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
           {/* What we offer */}
           <motion.div
