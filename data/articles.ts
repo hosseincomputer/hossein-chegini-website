@@ -20,6 +20,57 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    id: 9,
+    slug: 'ai-driven-pipeline-content-generation-seo',
+    title: 'An AI-Driven Pipeline for Automated Content Generation and SEO Optimisation',
+    description: 'A systematic approach to building an AI pipeline that generates website content using GPT, ranks it with Google Trends, and automatically publishes it — combining bots and human oversight.',
+    mediumUrl: 'https://medium.com/@h.chegini/an-ai-driven-pipeline-for-automated-content-generation-and-seo-optimisation',
+    date: '2026-03-21',
+    tags: ['AI', 'SEO', 'Content Generation', 'GPT', 'Automation'],
+    platform: 'Medium',
+    author: 'Hossein Chegini',
+    readingTime: '3 min read',
+    keywords: ['AI content generation', 'automated content pipeline', 'SEO optimisation', 'GPT content', 'Google Trends API', 'content automation', 'web crawler', 'Python automation', 'GEO optimisation'],
+    content: [
+      {
+        heading: 'Introduction',
+        paragraphs: [
+          'When it comes to creating content for a website, generative AI can help partly, since the major part should still be conducted by human agents. This article depicts a diagram and a systematic approach to creating content for a website.',
+          'The system consists of several components, code, and APIs to communicate with different platforms. However, we can say that the main part is the prompt, where we instruct the GPT model on how to create the content and with which parameters.',
+        ]
+      },
+      {
+        heading: 'The Prompt — The Core of the Pipeline',
+        paragraphs: [
+          'The following shows a snapshot of the prompt used for content creation:',
+          '"Create a thought-provoking question as a title in {lang} (3-6 words) about: {keywords}{full_context}. Write a practical guide in {lang} about {gathered_content}{domain_specific_prompt}. Include step-by-step explanations and real-world applications. Write entirely in {lang}. Limit to {token_limit} tokens."',
+          'The words in the brackets could be static or dynamically change each time the program runs to create the content, but they could also be keywords such as: robotics, aviation, computer science, etc.',
+        ]
+      },
+      {
+        heading: 'SEO and GEO Ranking with Google Trends',
+        paragraphs: [
+          'The software is not just for creating the content, but also for ranking it higher in SEO and GEO, which is why we have the Google API component. After the prompt, the text would be compared against popular terms in Google Trends to produce comparable content that can achieve a higher ranking.',
+          'This step is important because it shows that the purpose of the software is not just to create content, but to enhance it in a way that improves its standing in Google indexing.',
+        ]
+      },
+      {
+        heading: 'Input Parameters and Configuration',
+        paragraphs: [
+          'A set of input parameters defines how the content should be created. This is not the final solution and could be changed based on users\' ideas and content creators. They might come up with more or fewer input parameters depending on their domain expertise or creative preferences.',
+          'One of the other important components of the software is to read the input parameters from a website location like a settings or context parameters page — this way users and clients can put their ideas and thoughts on how to create the next content, which could be a good point for giving content high diversity and style each time.',
+        ]
+      },
+      {
+        heading: 'Automated Publishing',
+        paragraphs: [
+          'As the software becomes more sophisticated, one of the main challenges is automating the posting of the content to any website once it is ready. This is done programmatically and automatically using Python.',
+          'The complete pipeline creates content in a hybrid manner, managed and handled by both bots and humans, incorporating all the parts mentioned and discussed — from prompt generation and Google Trends ranking through to automated publishing.',
+        ]
+      },
+    ]
+  },
+  {
     id: 8,
     slug: 'evolution-of-automation-jacquard-to-chatbots',
     title: 'Stitched in Time: The Evolution of Automation from Jacquard to Chatbots',
