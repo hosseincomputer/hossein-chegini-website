@@ -167,6 +167,80 @@ export default function CrawlerClient() {
             ))}
           </motion.div>
 
+          {/* Article: AI-Driven Pipeline */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-primary-500/20 shadow-sm mb-12"
+          >
+            <h2 className="text-2xl font-bold text-dark-800 mb-8">
+              An AI-Driven Pipeline for Automated Content Generation and SEO Optimisation
+            </h2>
+
+            <div className="space-y-8 text-dark-600 leading-relaxed">
+              <div>
+                <p className="text-lg mb-4">
+                  When it comes to creating content for a website, generative AI can help partly, since the major part should still be conducted by human agents. This section depicts a systematic approach to creating content for a website using an AI-powered crawler pipeline.
+                </p>
+                <p className="text-lg">
+                  The system consists of several components, code, and APIs to communicate with different platforms. However, the main part is the prompt, where we instruct the GPT model on how to create the content and with which parameters.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-dark-800 mb-3">The Prompt — Core of the Pipeline</h3>
+                <p className="mb-4">The following shows a snapshot of the prompt used for content creation:</p>
+                <div className="bg-dark-800/5 border border-dark-800/10 rounded-xl p-5 font-mono text-sm text-dark-700 leading-relaxed">
+                  Create a thought-provoking question as a title in {'{lang}'} (3-6 words) about: {'{keywords}'}{'{full_context}'}.<br /><br />
+                  Write a practical guide in {'{lang}'} about {'{gathered_content}'}{'{domain_specific_prompt}'}.<br />
+                  Include step-by-step explanations and real-world applications. Write entirely in {'{lang}'}.<br />
+                  Limit to {'{token_limit}'} tokens.
+                </div>
+                <p className="mt-4">
+                  The words in the brackets could be static or dynamically change each time the program runs. Keywords can span domains such as robotics, aviation, computer science, and more.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-dark-800 mb-3">SEO and GEO Ranking with Google Trends</h3>
+                <p className="mb-4">
+                  The software is not just for creating content, but also for ranking it higher in SEO and GEO, which is why we have the Google API component. After the prompt, the text is compared against popular terms in Google Trends to produce comparable content that achieves a higher ranking.
+                </p>
+                <p>
+                  This step is important because it shows that the purpose of the software is not just to create content, but to enhance it in a way that improves its standing in Google indexing.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-dark-800 mb-3">Input Parameters and Configuration</h3>
+                <p className="mb-4">
+                  A set of input parameters defines how the content should be created. This is not the final solution and could be changed based on users' ideas and content creators. They might come up with more or fewer input parameters depending on their domain expertise or creative preferences.
+                </p>
+                <p>
+                  One of the other important components is reading the input parameters from a website location like a settings or context parameters page — this way users and clients can put their ideas and thoughts on how to create the next content, giving each piece high diversity and a unique style.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-dark-800 mb-3">Automated Publishing</h3>
+                <p>
+                  As the software becomes more sophisticated, one of the main challenges is automating the posting of content to any website once it is ready. This is done programmatically and automatically using Python. The complete pipeline creates content in a hybrid manner — managed and handled by both bots and humans — from prompt generation and Google Trends ranking through to automated publishing.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-8 pt-6 border-t border-primary-500/20">
+              <Link
+                href="/blog/ai-driven-pipeline-content-generation-seo"
+                className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium transition-colors"
+              >
+                Read the full article on our blog →
+              </Link>
+            </div>
+          </motion.div>
+
           {/* CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
