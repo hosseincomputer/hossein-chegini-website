@@ -1,7 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { ArrowLeft, Map, ChevronLeft, ChevronRight } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { ArrowLeft, Map, ChevronLeft, ChevronRight, X, ZoomIn } from 'lucide-react'
 import { useState } from 'react'
 import Link from 'next/link'
 import Navigation from '@/components/Navigation'
@@ -32,6 +32,7 @@ const pipeline = [
 
 export default function GeoMapClient() {
   const [imgIndex, setImgIndex] = useState(0)
+  const [lightboxOpen, setLightboxOpen] = useState(false)
 
   const prev = () => setImgIndex((i) => (i - 1 + images.length) % images.length)
   const next = () => setImgIndex((i) => (i + 1) % images.length)
@@ -189,6 +190,65 @@ export default function GeoMapClient() {
               ))}
             </ol>
           </motion.div>
+
+          {/* DFD Diagram */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-primary-500/20 shadow-sm mb-12"
+          >
+            <h2 className="text-2xl font-bold text-dark-800 mb-6">Pipeline Diagram</h2>
+            <div
+              className="relative rounded-xl overflow-hidden border border-primary-500/10 cursor-zoom-in group"
+              onClick={() => setLightboxOpen(true)}
+            >
+              <img
+                src="/solutions/Daisy_DFD_diagram.jpeg"
+                alt="Geo Map Optimisation pipeline diagram"
+                className="w-full h-auto object-contain"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-200 flex items-center justify-center">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-white/90 rounded-full p-3 shadow-lg">
+                  <ZoomIn className="w-6 h-6 text-dark-700" />
+                </div>
+              </div>
+            </div>
+            <p className="text-sm text-dark-500 text-center mt-3">Click image to enlarge</p>
+          </motion.div>
+
+          {/* Lightbox */}
+          <AnimatePresence>
+            {lightboxOpen && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-start justify-center overflow-y-auto"
+                onClick={() => setLightboxOpen(false)}
+              >
+                <button
+                  onClick={() => setLightboxOpen(false)}
+                  className="fixed top-4 right-4 z-50 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors"
+                >
+                  <X className="w-6 h-6 text-dark-700" />
+                </button>
+                <motion.img
+                  initial={{ scale: 0.95, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.95, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  src="/solutions/Daisy_DFD_diagram.jpeg"
+                  alt="Geo Map Optimisation pipeline diagram"
+                  className="w-full max-w-none my-8 px-4 cursor-default"
+                  style={{ minWidth: '100%' }}
+                  onClick={(e) => e.stopPropagation()}
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
 
           {/* Python Packages */}
           <motion.div
