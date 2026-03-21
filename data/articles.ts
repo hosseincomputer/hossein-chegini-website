@@ -20,6 +20,60 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    id: 10,
+    slug: 'geo-map-optimisation-python',
+    title: 'Study of a Geo Map Optimisation Use Case Using Python',
+    description: 'A practical approach to finding road distance based on suburb coordinates in Brisbane, Australia — detecting whether an address is inside a suburb polygon and finding the shortest path to the nearest one.',
+    mediumUrl: 'https://medium.com/p/a60b3232d5de',
+    date: '2026-03-21',
+    tags: ['Python', 'Geospatial', 'Route Optimisation', 'GeoPandas', 'Shapely'],
+    platform: 'Medium',
+    author: 'Hossein Chegini',
+    readingTime: '4 min read',
+    keywords: ['geo map optimisation', 'geospatial python', 'route optimisation', 'shortest path', 'Dijkstra', 'Shapely', 'GeoPandas', 'Brisbane suburbs', 'polygon detection', 'KML parser'],
+    content: [
+      {
+        heading: 'Overview',
+        paragraphs: [
+          'This article presents one of the first approaches to finding road distance based on suburb coordinates in Brisbane, Australia. The goal is to find the closest polygon — representing a suburb — to a user\'s address.',
+          'If the address is inside the polygon, the software detects it and indicates that it is inside; otherwise, it identifies the closest polygon and finds the shortest path from the user\'s address coordinates to the nearest edge of that polygon.',
+        ]
+      },
+      {
+        heading: 'Business Value',
+        paragraphs: [
+          'Finds the nearest office or service automatically, helping users — especially older individuals — quickly access the closest location without confusion.',
+          'Saves time and reduces travel effort by calculating the shortest route, avoiding unnecessary distance and heavy traffic.',
+          'Simple and user-friendly experience, making it easy for all users, including those less familiar with technology, to navigate and make decisions confidently.',
+          'This enables route finding for businesses that aim to identify the best services, facilities, and opportunities for people who reside in a particular suburb, or for those who want to find the closest suburb for their needs.',
+        ]
+      },
+      {
+        heading: 'Python Packages Used',
+        paragraphs: [
+          'Shapely / GeoMap: Used to handle geometric operations such as detecting whether a point lies inside a polygon and calculating distances to boundaries.',
+          'KML Parser: Used to read and extract suburb boundary data from KML files into usable formats.',
+          'JSON: Used to structure and store geospatial data and intermediate results in a flexible, readable format.',
+          'Geocoder: Used to convert user addresses into geographic coordinates (latitude and longitude).',
+          'Haversine: Used to calculate the distance between two geographic points based on their coordinates.',
+          'GeoPandas: Used to manage, analyse, and visualise geospatial data efficiently in a tabular structure.',
+        ]
+      },
+      {
+        heading: 'How the Pipeline Works',
+        paragraphs: [
+          '1. User provides their address.',
+          '2. The address is converted to geocodes (latitude, longitude).',
+          '3. The system checks if the address is inside any polygon — if so, it prints "inside" and ends.',
+          '4. If not inside, for each polygon the system calculates using the Shapely algorithm and Dijkstra\'s algorithm.',
+          '5. Results are sorted across all polygons.',
+          '6. The shortest path and destination are depicted on the map.',
+          'Please feel free to reach out if you have any questions or would like to discuss any part of this solution in more detail.',
+        ]
+      },
+    ]
+  },
+  {
     id: 9,
     slug: 'ai-driven-pipeline-content-generation-seo',
     title: 'An AI-Driven Pipeline for Automated Content Generation and SEO Optimisation',
