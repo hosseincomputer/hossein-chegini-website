@@ -22,15 +22,15 @@ export const articles: Article[] = [
   {
     id: 10,
     slug: 'geo-map-optimisation-python',
-    title: 'Study of a Geo Map Optimisation Use Case Using Python',
-    description: 'A practical approach to finding road distance based on suburb coordinates in Brisbane, Australia — detecting whether an address is inside a suburb polygon and finding the shortest path to the nearest one.',
+    title: 'How to Find the Nearest Location Using Python Geospatial Analysis',
+    description: 'Step-by-step guide to building a geospatial route optimisation system in Python — detecting suburb polygons, calculating shortest paths with Dijkstra\'s algorithm, and finding the nearest location from any address in Brisbane.',
     mediumUrl: 'https://medium.com/p/a60b3232d5de',
     date: '2026-03-21',
     tags: ['Python', 'Geospatial', 'Route Optimisation', 'GeoPandas', 'Shapely'],
     platform: 'Medium',
     author: 'Hossein Chegini',
     readingTime: '4 min read',
-    keywords: ['geo map optimisation', 'geospatial python', 'route optimisation', 'shortest path', 'Dijkstra', 'Shapely', 'GeoPandas', 'Brisbane suburbs', 'polygon detection', 'KML parser'],
+    keywords: ['geospatial route optimisation Python', 'find nearest location Python', 'suburb polygon detection', 'Dijkstra shortest path Python', 'Shapely GeoPandas tutorial', 'location-based service Python', 'KML parser Python', 'Brisbane geospatial analysis'],
     content: [
       {
         heading: 'Overview',
@@ -76,15 +76,15 @@ export const articles: Article[] = [
   {
     id: 9,
     slug: 'ai-driven-pipeline-content-generation-seo',
-    title: 'An AI-Driven Pipeline for Automated Content Generation and SEO Optimisation',
-    description: 'A systematic approach to building an AI pipeline that generates website content using GPT, ranks it with Google Trends, and automatically publishes it — combining bots and human oversight.',
+    title: 'Build an AI Content Generation Pipeline with GPT and Google Trends',
+    description: 'How to build an automated content pipeline using GPT and Google Trends API — generate SEO-optimised articles, rank them against trending keywords, and auto-publish to your website using Python.',
     mediumUrl: 'https://medium.com/@h.chegini/an-ai-driven-pipeline-for-automated-content-generation-and-seo-optimisation',
     date: '2026-03-21',
     tags: ['AI', 'SEO', 'Content Generation', 'GPT', 'Automation'],
     platform: 'Medium',
     author: 'Hossein Chegini',
     readingTime: '3 min read',
-    keywords: ['AI content generation', 'automated content pipeline', 'SEO optimisation', 'GPT content', 'Google Trends API', 'content automation', 'web crawler', 'Python automation', 'GEO optimisation'],
+    keywords: ['AI content generation pipeline', 'GPT automated content', 'Google Trends API Python', 'SEO content automation', 'auto-publish website Python', 'AI SEO optimisation', 'content crawler Python'],
     content: [
       {
         heading: 'Introduction',
@@ -127,15 +127,15 @@ export const articles: Article[] = [
   {
     id: 8,
     slug: 'evolution-of-automation-jacquard-to-chatbots',
-    title: 'Stitched in Time: The Evolution of Automation from Jacquard to Chatbots',
-    description: 'A historical journey through automation — from ancient Egyptian water clocks and the Jacquard loom to the steam engine, the Internet, deep learning, and ChatGPT.',
+    title: 'History of Automation: From the Jacquard Loom to AI Chatbots',
+    description: 'A complete history of automation — tracing the journey from the Jacquard loom and steam engine through the Internet, deep learning, and ChatGPT, and what it means for the future of AI.',
     mediumUrl: 'https://medium.com/@h.chegini/stitched-in-time-the-evolution-of-automation-from-jacquard-to-chatbots',
     date: '2023-05-28',
     tags: ['Automation', 'AI', 'History', 'ChatGPT'],
     platform: 'Medium',
     author: 'Hossein Chegini',
     readingTime: '4 min read',
-    keywords: ['automation history', 'Jacquard loom', 'industrial revolution', 'artificial intelligence', 'ChatGPT', 'deep learning', 'neural networks', 'Industry 4.0', 'cognitive automation'],
+    keywords: ['history of automation', 'Jacquard loom AI', 'industrial revolution to AI', 'ChatGPT automation history', 'evolution of artificial intelligence', 'cognitive automation explained', 'Industry 4.0 AI'],
     content: [
       {
         heading: 'Introduction',
@@ -178,15 +178,15 @@ export const articles: Article[] = [
   {
     id: 7,
     slug: 'why-pay-attention-to-attentions-in-llms',
-    title: 'Why We Should Pay Attention to Attentions in LLMs?',
-    description: 'A clear explanation of why attention mechanisms are critical in Large Language Models — with a practical comparison showing the difference between LLM responses with and without attention.',
+    title: 'How Attention Mechanisms Work in Large Language Models (LLMs)',
+    description: 'A clear explanation of attention mechanisms in Large Language Models — why they are critical, how they work with query-key-value operations, and a practical comparison showing LLM responses with and without attention.',
     mediumUrl: 'https://medium.com/@h.chegini/why-we-should-pay-attention-to-attentions-in-llms',
     date: '2023-11-07',
     tags: ['LLM', 'Attention', 'NLP', 'Deep Learning'],
     platform: 'Medium',
     author: 'Hossein Chegini',
     readingTime: '3 min read',
-    keywords: ['attention mechanism', 'LLM', 'large language model', 'NLP', 'transformer', 'ChatGPT', 'deep learning', 'query key value', 'attention is all you need'],
+    keywords: ['how attention mechanism works LLM', 'transformer attention explained', 'large language model attention', 'query key value attention', 'NLP attention tutorial', 'ChatGPT how it works', 'attention is all you need explained'],
     content: [
       {
         heading: 'Introduction',
@@ -222,15 +222,15 @@ export const articles: Article[] = [
   {
     id: 6,
     slug: 'exploring-yolo-deep-network-analysis',
-    title: 'Exploring YOLO: A Deep Network Analysis',
-    description: 'A visual investigation into how YOLO processes images layer by layer — exploring convolutions, batch normalization, and how deep CNNs transform pixel data into object detections.',
+    title: 'How YOLO Object Detection Works: A Deep Neural Network Analysis',
+    description: 'A visual deep-dive into how YOLO processes images layer by layer — exploring convolutions, batch normalization, and how deep CNNs transform pixel data into real-time object detections.',
     mediumUrl: 'https://medium.com/@h.chegini/exploring-yolo-a-deep-network-analysis',
     date: '2023-05-20',
     tags: ['YOLO', 'Computer Vision', 'Deep Learning', 'CNN'],
     platform: 'Medium',
     author: 'Hossein Chegini',
     readingTime: '9 min read',
-    keywords: ['YOLO', 'object detection', 'deep learning', 'CNN', 'convolutional neural network', 'computer vision', 'image processing', 'YOLOv3', 'batch normalization'],
+    keywords: ['YOLO object detection explained', 'how YOLO works', 'real-time object detection CNN', 'YOLOv3 deep learning', 'convolutional neural network image detection', 'computer vision tutorial', 'YOLO layer analysis'],
     content: [
       {
         heading: 'Motivation',
@@ -281,15 +281,15 @@ export const articles: Article[] = [
   {
     id: 5,
     slug: 'genetic-algorithms-essential-introduction',
-    title: 'Genetic Algorithms: An Essential Introduction — From Understanding Nature to Coding',
-    description: 'A comprehensive introduction to Genetic Algorithms — covering genes, chromosomes, mutation, crossover, fitness functions, and a hands-on Python implementation solving the N-Queen problem.',
+    title: 'Genetic Algorithms Explained: From Basics to Python Implementation',
+    description: 'A comprehensive beginner\'s guide to Genetic Algorithms — covering genes, chromosomes, mutation, crossover, and fitness functions, with a hands-on Python implementation solving the N-Queen problem.',
     mediumUrl: 'https://medium.com/@h.chegini/genetic-algorithms-an-essential-introduction-from-understanding-nature-to-coding',
     date: '2023-06-23',
     tags: ['Genetic Algorithms', 'AI', 'Python', 'Optimization'],
     platform: 'Medium',
     author: 'Hossein Chegini',
     readingTime: '11 min read',
-    keywords: ['genetic algorithm', 'GA', 'N-Queen problem', 'optimization', 'evolutionary computation', 'mutation', 'crossover', 'fitness function', 'Python AI'],
+    keywords: ['genetic algorithm tutorial Python', 'genetic algorithm explained', 'N-Queen problem Python', 'evolutionary optimisation Python', 'mutation crossover fitness function', 'AI optimisation algorithm', 'genetic algorithm beginners'],
     content: [
       {
         heading: 'Introduction',
@@ -342,15 +342,15 @@ export const articles: Article[] = [
   {
     id: 4,
     slug: 'complex-scenarios-structuring-dbt-models',
-    title: 'Complex Scenarios: Structuring Your Data Build Tool (DBT) Models',
-    description: 'How to apply modular programming principles to SQL using DBT — with a practical shopping example covering staging, intermediate, and final model layers.',
+    title: 'How to Structure DBT Models for Complex Data Pipelines',
+    description: 'A practical guide to applying modular programming in SQL using DBT — covering staging, intermediate, and final model layers with a real-world shopping example for data engineers.',
     mediumUrl: 'https://medium.com/@h.chegini/complex-scenarios-structuring-your-data-build-tool-dbt-models',
     date: '2024-02-11',
     tags: ['DBT', 'SQL', 'Data Engineering', 'Analytics'],
     platform: 'Medium',
     author: 'Hossein Chegini',
     readingTime: '5 min read',
-    keywords: ['DBT', 'Data Build Tool', 'SQL modular programming', 'data engineering', 'staging models', 'intermediate models', 'data pipeline', 'analytics engineering'],
+    keywords: ['DBT models tutorial', 'how to structure DBT models', 'data build tool SQL', 'DBT staging intermediate final', 'data pipeline modular SQL', 'analytics engineering DBT', 'DBT data engineering guide'],
     content: [
       {
         heading: 'Introduction',
@@ -387,15 +387,15 @@ export const articles: Article[] = [
   {
     id: 3,
     slug: 'is-gpt5-better-at-code-generation-and-debugging',
-    title: 'Is GPT-5 Better at Code Generation and Debugging? Not Really',
-    description: 'A hands-on experiment comparing GPT-5 and GPT-4.5 Turbo for SQL debugging — and why GPT-5 may have hit the S-curve ceiling of LLM performance.',
+    title: 'GPT-5 vs GPT-4.5 for Code Generation and Debugging: A Real Test',
+    description: 'A hands-on experiment comparing GPT-5 and GPT-4.5 Turbo on SQL debugging tasks — revealing why GPT-5 may have hit the S-curve ceiling and what it means for AI-assisted development.',
     mediumUrl: 'https://medium.com/@h.chegini/is-gpt-5-better-at-code-generation-and-debugging-not-really-6ab94d422fa6',
     date: '2025-08-15',
     tags: ['GPT-5', 'LLM', 'AI', 'Debugging', 'Code Generation'],
     platform: 'Medium',
     author: 'Hossein Chegini',
     readingTime: '5 min read',
-    keywords: ['GPT-5', 'GPT-4.5', 'code generation', 'AI debugging', 'LLM performance', 'SQL debugging', 'ChatGPT', 'overfitting', 'S-curve'],
+    keywords: ['GPT-5 vs GPT-4 code generation', 'GPT-5 SQL debugging', 'AI code generation comparison', 'LLM performance limits', 'ChatGPT coding test', 'GPT-5 review', 'AI debugging tool comparison'],
     content: [
       {
         heading: 'The Motivation',
@@ -440,15 +440,15 @@ export const articles: Article[] = [
   {
     id: 2,
     slug: 'types-of-ai-as-a-service',
-    title: 'Types or Components of AI as a Service',
-    description: 'A breakdown of the three core components of AI as a Service — Data, Model, and Insight — and how they work together to bring unproductionised AI use cases to market.',
+    title: 'AI as a Service Components: Data, Model, and Insight Explained',
+    description: 'A breakdown of the three core components of AI as a Service (AIaaS) — Data, Model, and Insight — and how they work together to bring AI use cases to market for businesses.',
     mediumUrl: 'https://medium.com/@h.chegini/types-or-components-of-ai-as-a-service',
     date: '2026-03-14',
     tags: ['AI', 'AIaaS', 'Data', 'Machine Learning'],
     platform: 'Medium',
     author: 'Hossein Chegini',
     readingTime: '2 min read',
-    keywords: ['AI as a Service', 'AIaaS', 'Data Pipeline', 'AI Model', 'Machine Learning', 'AI Insight', 'AI Components'],
+    keywords: ['AI as a Service components', 'AIaaS explained', 'AI data model insight', 'AI service for business', 'machine learning pipeline components', 'AI productionisation', 'AI service architecture'],
     content: [
       {
         heading: 'Unproductionised AI Use Cases',
@@ -480,15 +480,15 @@ export const articles: Article[] = [
   {
     id: 1,
     slug: 'ai-as-a-service',
-    title: 'AI as a Service (AIaaS): What It Really Means',
-    description: 'Exploring the true meaning of AI-as-a-Service — what it is, why it matters, and how it powers real-world solutions for businesses.',
+    title: 'What Is AI as a Service (AIaaS)? A Business Guide',
+    description: 'A practical guide to AI as a Service (AIaaS) — what it is, why businesses are adopting it, and how it powers real-world AI solutions without building from scratch.',
     mediumUrl: 'https://medium.com/@h.chegini/ai-as-a-service-aiaas-what-it-really-means-335d17745e9b',
     date: '2026-02-20',
     tags: ['AI', 'AIaaS', 'Machine Learning'],
     platform: 'Medium',
     author: 'Hossein Chegini',
     readingTime: '8 min read',
-    keywords: ['AI as a Service', 'AIaaS', 'Machine Learning', 'Artificial Intelligence', 'SaaS', 'PaaS', 'IaaS', 'Cloud AI'],
+    keywords: ['what is AI as a Service', 'AIaaS for business', 'AI service provider', 'cloud AI solutions', 'machine learning as a service', 'AI SaaS platform', 'AI business solutions'],
     content: [
       {
         heading: 'The Rise of Cloud Service Models',

@@ -2,11 +2,12 @@ import type { Metadata } from 'next'
 import CrawlerClient from './CrawlerClient'
 
 export const metadata: Metadata = {
-  title: 'Crawler | Kasra Analytics',
-  description: 'Automated web crawling and content extraction — turning unstructured web data into structured, actionable datasets for your business.',
+  title: 'Web Scraping & Data Extraction Service | Kasra Analytics',
+  description: 'Python-based web scraping and crawling service — extract structured data from any website at scale for price monitoring, lead generation, market research, and AI pipelines.',
+  keywords: ['web scraping service', 'data extraction Python', 'automated web crawler', 'price monitoring scraper', 'lead generation crawling', 'BeautifulSoup Scrapy service'],
   openGraph: {
-    title: 'Crawler | Kasra Analytics',
-    description: 'Automated web crawling and content extraction using Python.',
+    title: 'Web Scraping & Data Extraction Service | Kasra Analytics',
+    description: 'Python web scraping and data extraction — turning websites into structured datasets for your business.',
     url: 'https://kasralabs.ai/solutions/crawler',
   },
   alternates: {
