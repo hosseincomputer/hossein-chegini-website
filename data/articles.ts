@@ -20,6 +20,80 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    id: 11,
+    slug: 'rag-chatbot-service-document-qa',
+    title: 'RAG Chatbot Service: How to Build a Conversational AI for Business Documents',
+    description: 'A practical guide to Retrieval-Augmented Generation (RAG) — how to convert PDFs, websites, and documents into an interactive chatbot for document Q&A, product search, and business knowledge assistants.',
+    mediumUrl: 'https://medium.com/p/16f6394ed37c',
+    date: '2026-04-07',
+    tags: ['RAG', 'AI', 'Chatbot', 'LLM', 'Document Q&A'],
+    platform: 'Medium',
+    author: 'Hossein Chegini',
+    readingTime: '5 min read',
+    keywords: ['RAG chatbot service', 'document Q&A AI', 'conversational AI for business', 'retrieval augmented generation', 'RAG pipeline Python', 'chatbot for documents', 'AI knowledge assistant', 'skincare RAG example'],
+    content: [
+      {
+        heading: 'Introduction',
+        paragraphs: [
+          'As the amount of information and documents grows across different sources such as websites, PDFs, and media, it becomes like an ocean that is difficult to navigate and fully understand. Gaining a clear grasp of underlying knowledge is no longer easy through manual research alone.',
+          'With the rise of generative AI, users now have the ability to talk to information instead of searching for it manually. This creates a powerful opportunity to save time and access knowledge more efficiently than ever before.',
+        ]
+      },
+      {
+        heading: 'What is RAG?',
+        paragraphs: [
+          'Retrieval-Augmented Generation (RAG) is a recent AI approach that enables users to convert their information — whether it is text, websites, images, or videos — into an interactive chatbot. This allows users to communicate directly with their data.',
+          'This capability introduces a new type of AI service: RAG chatbot services. These services extend beyond simple chat and include use cases such as document Q&A systems, conversational AI for business documents, and knowledge assistants trained on specific domains.',
+        ]
+      },
+      {
+        heading: 'Use Case: Skincare RAG Application',
+        paragraphs: [
+          'This article presents an example of a RAG application designed to assist users by providing multiple services based on skincare brochures and documents. The dataset includes detailed descriptions of several skincare products, including scientific names, chemical ingredients, directions for use, and skin conditions for application.',
+          'The RAG system is trained on these documents and converted into a chatbot ready to answer user queries. Users can ask questions such as "Which product should I buy based on my skin condition?" In more complex cases, the system can escalate the interaction from the chatbot to a human skincare specialist if needed.',
+        ]
+      },
+      {
+        heading: 'Content Variability in Documents',
+        paragraphs: [
+          'The training documents may vary in detail. Some products have short descriptions including only the brand name and key ingredients, while others include full ingredient lists and functional explanations.',
+          'This variability makes RAG particularly powerful — it can handle both simple and complex information and present it in a conversational format regardless of the source document quality.',
+        ]
+      },
+      {
+        heading: 'Structuring Product Information',
+        paragraphs: [
+          'Brochure contents can be classified into several types of information: product name, product ingredients, product shape, gender use, and product volume. This structured information can be stored and retrieved efficiently.',
+          'When there are many products, it becomes a valuable tool for users trying to find their desired product based on their skin conditions, age, and preferences.',
+        ]
+      },
+      {
+        heading: 'Proposed Product Search Workflow',
+        paragraphs: [
+          '1. Ask initial questions to generate a shortlist of products from a RAG chatbot.',
+          '2. Continue asking more specific questions if you have particular skin conditions.',
+          '3. The RAG system may recommend consulting a specialist for more detailed advice.',
+          '4. Finalise your product choice at the shopping centre once you are confident about the best option.',
+          'RAG not only improves the speed of research but also shifts how people interact with the market — generating a shortlist of products based on skin type, age, gender, and preferences before visiting a store.',
+        ]
+      },
+      {
+        heading: 'RAG Pipeline and Bot Workflow',
+        paragraphs: [
+          'The pipeline consists of three core RAG stages: converting PDF documents into embeddings, indexing them in a vector database, and setting up the Q&A interaction with the bot. The pipeline also incorporates mechanisms to monitor and improve response quality, with accuracy potentially reaching up to 90%.',
+          'The pipeline can be deployed across various messaging platforms such as WhatsApp or email, making it accessible and user-friendly. It is also designed to connect users to specialists when needed — creating a hybrid system that combines automated responses with human expertise.',
+        ]
+      },
+      {
+        heading: 'Pre-Sales Potential',
+        paragraphs: [
+          'The pipeline is designed to capture user preferences and feedback, creating a valuable source of insight for businesses. This information helps product companies identify gaps in their offerings and develop new products when existing ones do not fully satisfy user needs.',
+          'This makes the system not only a recommendation tool but also a pre-sales intelligence engine — valuable for shopping centres, brands, and any business with a large product catalogue.',
+        ]
+      },
+    ]
+  },
+  {
     id: 10,
     slug: 'geo-map-optimisation-python',
     title: 'How to Find the Nearest Location Using Python Geospatial Analysis',
