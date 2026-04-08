@@ -7,7 +7,7 @@ import { Search, Bot, Map, BarChart3, ScanSearch, ArrowRight } from 'lucide-reac
 const solutions = [
   {
     slug: 'crawler',
-    title: 'Crawler',
+    title: 'Context Creation Service',
     description: 'Automated web crawling and content extraction — turning unstructured web data into structured, actionable datasets for your business.',
     icon: Search,
     tags: ['Python', 'Automation', 'Data Extraction'],
@@ -18,7 +18,7 @@ const solutions = [
   },
   {
     slug: 'bot-design',
-    title: 'Bot Design',
+    title: 'AI Conversation & Q&A Service',
     description: 'Intelligent conversational bots and automated agents — from RAG-powered document Q&A to customer support automation with high accuracy.',
     icon: Bot,
     tags: ['LLM', 'RAG', 'OpenAI API'],
@@ -51,7 +51,7 @@ const solutions = [
   },
   {
     slug: 'insight-generation',
-    title: 'Insight Generation',
+    title: 'Insightful Analytics Service',
     description: 'Content analysis and viral prediction — gap analysis, trend detection, and data-driven insights for platforms like YouTube and social media.',
     icon: BarChart3,
     tags: ['Analytics', 'ML', 'Statistics'],
