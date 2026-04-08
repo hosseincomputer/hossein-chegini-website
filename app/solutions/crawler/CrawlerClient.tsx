@@ -45,7 +45,7 @@ export default function CrawlerClient() {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
-              Crawler
+              Context Creation Service
             </h1>
             <div className="flex flex-wrap justify-center gap-3 mb-8">
               {['Python', 'Automation', 'Data Extraction', 'BeautifulSoup', 'Scrapy'].map((tag) => (

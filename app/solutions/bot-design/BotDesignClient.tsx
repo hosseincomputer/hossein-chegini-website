@@ -60,7 +60,7 @@ export default function BotDesignClient() {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
-              RAG Chatbot & Conversational AI
+              AI Conversation & Q&A Service
             </h1>
             <div className="flex flex-wrap justify-center gap-3 mb-8">
               {['RAG', 'LLM', 'Document Q&A', 'OpenAI', 'Vector Database', 'Python'].map((tag) => (
