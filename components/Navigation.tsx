@@ -46,11 +46,11 @@ export default function Navigation() {
   ]
 
   const solutionItems = [
-    { href: '/solutions/crawler', label: 'Crawler' },
-    { href: '/solutions/bot-design', label: 'Bot Design' },
+    { href: '/solutions/crawler', label: 'Context Creation Service' },
+    { href: '/solutions/bot-design', label: 'AI Conversation & Q&A Service' },
     { href: '/solutions/image-processing', label: 'Image Processing' },
     { href: '/solutions/geo-map-optimisation', label: 'Geo Map Optimisation' },
-    { href: '/solutions/insight-generation', label: 'Insight Generation' },
+    { href: '/solutions/insight-generation', label: 'Insightful Analytics Service' },
   ]
 
   return (
