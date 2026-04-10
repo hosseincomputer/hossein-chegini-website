@@ -20,6 +20,60 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    id: 12,
+    slug: 'insightful-ai-service-youtube-analysis',
+    title: 'Insightful AI Service: How to Analyse YouTube Channels and Generate Content Ideas',
+    description: 'A practical guide to building an insightful AI pipeline that scrapes YouTube data, analyses sentiment with GPT, identifies content gaps, and generates high-potential video ideas using LLMs and EDA.',
+    mediumUrl: 'https://medium.com/@h.chegini/insightful-ai-service-youtube',
+    date: '2026-04-09',
+    tags: ['AI', 'YouTube', 'LLM', 'EDA', 'Insight Generation'],
+    platform: 'Medium',
+    author: 'Hossein Chegini',
+    readingTime: '5 min read',
+    keywords: ['insightful AI service', 'YouTube channel analysis AI', 'content gap analysis LLM', 'GPT YouTube sentiment analysis', 'AI content idea generation', 'YouTube data scraping Python', 'EDA AI pipeline'],
+    content: [
+      {
+        heading: 'Introduction',
+        paragraphs: [
+          'When reviewing data mining systematic roadmaps such as CRISP-DM, we can see that AI components and tools are not just limited to providing data mining or model training. When people hear about AI, they often think of LLMs, XGBoost, neural networks, or image processing models that can bring value to a business.',
+          'An insightful service is a type of AI service that provides information, details, observability, and insights into a business use case. Its primary value lies in improving visibility into a business problem that was not clearly understood before applying AI.',
+        ]
+      },
+      {
+        heading: 'YouTube Insight Use Case',
+        paragraphs: [
+          'The following use case demonstrates how AI as a service can provide insights into YouTube channels. The motivation is to address: a high-level view of a specific niche across existing YouTube channels, the sentiment of viewers and comments, and identifying gaps in current content by suggesting potential video titles or descriptions.',
+        ]
+      },
+      {
+        heading: 'Insightful Pipeline',
+        paragraphs: [
+          'The pipeline consists of two main frameworks: data collection and insight generation.',
+          'The first part begins by scraping data from YouTube channels — extracting views, comments, titles, descriptions, and transcriptions. Statistical analysis and sentiment analysis are applied, and results are stored in CSV files or a Snowflake table.',
+          'The insight generation framework builds on the first stage to perform deeper analysis such as identifying content gaps. For example, a channel focusing on children\'s education may have covered some topics but missed important areas — these gaps are identified through LLM capabilities and EDA pipelines.',
+        ]
+      },
+      {
+        heading: 'Three LLM Components',
+        paragraphs: [
+          'The pipeline uses three LLM components, each for a different function:',
+          '1. The first LLM performs initial analysis of videos.',
+          '2. The second LLM identifies gaps in the existing content.',
+          '3. The third LLM generates potential video ideas likely to attract strong attention when released.',
+          'After generating insights, the system can answer: which videos have the potential for high view counts, and which topics should be created to achieve strong results within a specific niche.',
+        ]
+      },
+      {
+        heading: 'Code Analysis',
+        paragraphs: [
+          'The YouTube API is used to connect to channels and scrape data based on topics of interest such as finance or education. Videos are ranked by view count and comments are analysed using GPT-4o for trends, complaints, and sentiment insights.',
+          'Noisy comments can be ignored during analysis, while those expressing complaints or negative sentiment are assigned higher weight — these weighted insights are used to identify content gaps.',
+          'Once gaps are identified, the next LLM generates potential video ideas likely to attract strong attention. The final step stores all insights in a CSV file for further processing in subsequent pipeline stages.',
+        ]
+      },
+    ]
+  },
+  {
     id: 11,
     slug: 'rag-chatbot-service-document-qa',
     title: 'RAG Chatbot Service: How to Build a Conversational AI for Business Documents',
