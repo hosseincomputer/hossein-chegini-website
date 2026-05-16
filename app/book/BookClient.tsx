@@ -28,7 +28,7 @@ export default function BookClient() {
             <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
               Vibe Coding
             </h1>
-            <p className="text-xl text-dark-600 font-medium">A Systematic Approach to Development</p>
+            <p className="text-xl text-dark-600 font-medium">A Systematic Approach to Applying AI in Software Development</p>
           </motion.div>
 
           {/* Book card */}
@@ -43,7 +43,7 @@ export default function BookClient() {
               {/* Book cover */}
               <div className="flex-shrink-0">
                 <img
-                  src="/book-cover.jpg"
+                  src="/books/vibe_coding_first_edition.jpg"
                   alt="Vibe Coding book cover"
                   className="w-52 rounded-xl shadow-lg border border-primary-500/10"
                 />
@@ -52,7 +52,7 @@ export default function BookClient() {
               {/* Book details */}
               <div className="flex-1">
                 <h2 className="text-2xl font-bold text-dark-800 mb-2">Vibe Coding</h2>
-                <p className="text-primary-600 font-medium mb-1">A Systematic Approach to Development with Practical Examples</p>
+                <p className="text-primary-600 font-medium mb-1">A Practical Guide to AI-Driven Software Development</p>
                 <p className="text-dark-500 text-sm mb-4">by <span className="font-semibold text-dark-700">Hossein Chegini</span></p>
 
                 <div className="flex items-center gap-1 mb-6">
