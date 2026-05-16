@@ -132,7 +132,30 @@ export default function Navigation() {
               </AnimatePresence>
             </div>
 
-            {navItems.slice(3).map((item) => (
+            {navItems.slice(3, 4).map((item) => (
+              <motion.button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="text-dark-700 hover:text-primary-700 transition-colors duration-200 relative group"
+                whileHover={{ y: -2 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+                {item.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 transition-all duration-300 group-hover:w-full"></span>
+              </motion.button>
+            ))}
+
+            <motion.div whileHover={{ y: -2 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
+              <Link
+                href="/book"
+                className="text-dark-700 hover:text-primary-700 transition-colors duration-200 relative group"
+              >
+                Book
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+            </motion.div>
+
+            {navItems.slice(4).map((item) => (
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
@@ -188,6 +211,19 @@ export default function Navigation() {
                   {item.label}
                 </motion.button>
               ))}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: navItems.length * 0.05 }}
+              >
+                <Link
+                  href="/book"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block w-full text-left px-4 py-3 text-dark-700 hover:text-primary-700 hover:bg-primary-500/10 rounded-lg transition-all duration-200"
+                >
+                  Book
+                </Link>
+              </motion.div>
               <div className="px-4 py-2 text-xs font-semibold text-primary-600 uppercase tracking-wider">Solutions</div>
               {solutionItems.map((item, index) => (
                 <motion.div key={item.href}
